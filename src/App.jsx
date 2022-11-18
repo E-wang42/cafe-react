@@ -1,9 +1,10 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, NavLink } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
+import NotFound from "./pages/404";
 
 function App() {
   return (
@@ -11,16 +12,16 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <NavLink to="/">HOME</NavLink>
           </li>
           <li>
-            <Link to="/About">ABOUT</Link>
+            <NavLink to="/About">ABOUT</NavLink>
           </li>
           <li>
-            <Link to="/Menu">MENU</Link>
+            <NavLink to="/Menu">MENU</NavLink>
           </li>
           <li>
-            <Link to="/Contact">CONTACT</Link>
+            <NavLink to="/Contact">CONTACT</NavLink>
           </li>
         </ul>
       </nav>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       {/* <div className="App">
