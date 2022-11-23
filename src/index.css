@@ -14,5 +14,43 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  font: inherit;
+  background: none;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+html {
+  font-family: "Fira Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: light) {
 }
