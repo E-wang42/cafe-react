@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Cormorant Upright", serif;
-  font-family: "Fira Sans", sans-serif;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --lightCoffee: #be4632;
+  --darkCoffee: #1f1919;
+  --lightGrey: #e6e6e6;
+  --darkGrey: #625d5d;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,6 +53,14 @@ html {
   font-family: "Fira Sans", sans-serif;
   scroll-behavior: smooth;
 }
+
+#main {
+  height: 300vh;
+}
+
+/* #section2 {
+  border: 3px solid red;
+} */
 
 @media (prefers-color-scheme: light) {
 }
