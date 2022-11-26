@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import HomeCards from "../components/HomeCards";
 
 function Home() {
   const ref = useRef(null);
@@ -47,6 +48,7 @@ function Home() {
         >
           Panda Coffee House
         </h1> */}
+        <HomeCards />
       </section>
     </>
   );
