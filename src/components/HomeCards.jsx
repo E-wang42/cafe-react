@@ -1,20 +1,19 @@
 import React from "react";
 
-function HomeCards() {
+function HomeCards(props) {
   return (
-    <div className="h-96 w-96 bg-light-coffee">
+    <div className="h-96 w-96 bg-light-coffee flex-col ">
       <div>
-        <img src="src\assets\coldbrew.jpg" alt="" />
+        <img src={props.img} alt="homeCard" />
       </div>
       <div>
-        <h2>Title Here</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          amet.
-        </p>
+        <h2 className="text">{props.title}</h2>
+        <p>{props.desc}</p>
       </div>
       <div>
-        <a href="#">CLICK ME</a>
+        <a href="#" className="btn bg">
+          {props.button}
+        </a>
       </div>
     </div>
   );
