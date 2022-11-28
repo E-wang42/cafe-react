@@ -18,5 +18,5 @@ module.exports = {
       width: {},
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("tailwindcss-debug-screens")],
 };

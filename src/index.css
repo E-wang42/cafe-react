@@ -8,6 +8,7 @@
   --darkCoffee: #1f1919;
   --lightGrey: #e6e6e6;
   --darkGrey: #625d5d;
+  --pastelCoffee: #d0a48d;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,6 +33,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Fira Sans", sans-serif;
+  background-color: var(--pastelCoffee);
 }
 
 li {
