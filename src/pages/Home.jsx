@@ -94,6 +94,36 @@ function Home() {
                 button="CLICK THIS BUTTON"
               />
             </div>
+            <div className="flex flex-row w-full">
+              <div className="flex flex-col">
+                <h2>never miss an offer</h2>
+                <p className="">
+                  Sign up for our newletter and receive 15% off on your next
+                  order
+                </p>
+              </div>
+              <input
+                className="w-80 h-12"
+                type="text"
+                name="email"
+                placeholder="enter e-mail..."
+              />
+              <a className="btn" href="">
+                SIGN UP
+              </a>
+            </div>
+            <div>
+              <img src="src\assets\pic.png" alt="mobile" />
+              <div>
+                <h2>
+                  Download the App and earn points towards your next order
+                </h2>
+                <div>
+                  <img src="src\assets\appstore.png" alt="appstore" />
+                  <img src="src\assets\playstore.png" alt="playstore" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

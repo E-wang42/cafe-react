@@ -13,7 +13,9 @@ module.exports = {
       fontFamily: {
         cormorant: [`"Cormorant Upright"`, "serif"],
         fira: [`"Fira Sans"`, "serif"],
+        roboto: ["Roboto", "serif"],
       },
+      width: {},
     },
   },
   plugins: [require("daisyui")],
