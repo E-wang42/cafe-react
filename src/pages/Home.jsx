@@ -96,7 +96,7 @@ function Home() {
             </div>
             <div className="flex flex-row w-full">
               <div className="flex flex-col">
-                <h2>never miss an offer</h2>
+                <h2 className="">never miss an offer</h2>
                 <p className="">
                   Sign up for our newletter and receive 15% off on your next
                   order
