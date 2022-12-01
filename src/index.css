@@ -66,5 +66,9 @@ button {
   text-align: center;
 }
 
+.navLinkStyle {
+  @apply mr-5 hover:text-white;
+}
+
 @media (prefers-color-scheme: light) {
 }
