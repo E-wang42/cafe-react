@@ -9,7 +9,13 @@ function Header() {
       <nav>
         <div className="contanier mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
           <div className="md:hidden">
-            <button onClick={() => setShowNav(!showNav)}>burger</button>
+            <button onClick={() => setShowNav(!showNav)}>
+              <div className="w-9 h-7 bg-stone-700 rounded focus:outline-none hover:bg-stone-600 flex flex-col gap-y-1 my-2">
+                <span className="block bg-white h-0.5 w-5 mt-1.5 ml-2"></span>
+                <span className="block bg-white h-0.5 w-5 ml-2"></span>
+                <span className="block bg-white h-0.5 w-5 ml-2"></span>
+              </div>
+            </button>
           </div>
           <div className="flex title-font font-bold items-center text-white">
             <img
@@ -42,7 +48,7 @@ function Header() {
             </li>
           </ul>
 
-          <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base">
+          <button className="inline-flex items-center bg-stone-700 border-0 py-1 px-3 focus:outline-none hover:bg-stone-600 rounded text-base">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
