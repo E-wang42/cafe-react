@@ -19,7 +19,7 @@ function Home() {
         <div>
           <div>
             <div className="flex flex-row justify-center">
-              <div className="w-3/12 h-96 bg-light-coffee">
+              <div className="w-3/12 h-96 bg-hero-pattern">
                 <div className="bg-secondary-content w-80 h-72 absolute top-24 left-56 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
                   <h2 className="text-center">
                     MORE THAN JUST COFFEE, CUP OF INSPIRATION
