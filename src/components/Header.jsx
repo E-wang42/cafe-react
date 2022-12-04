@@ -10,10 +10,10 @@ function Header() {
         <div className="contanier mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
           <div className="md:hidden">
             <button onClick={() => setShowNav(!showNav)}>
-              <div className="w-9 h-7 bg-stone-700 rounded focus:outline-none hover:bg-stone-600 flex flex-col gap-y-1 my-2">
-                <span className="block bg-white h-0.5 w-5 mt-1.5 ml-2"></span>
-                <span className="block bg-white h-0.5 w-5 ml-2"></span>
-                <span className="block bg-white h-0.5 w-5 ml-2"></span>
+              <div className="w-9 h-7 shadow bg-stone-700 rounded focus:outline-none hover:bg-stone-600 flex flex-col gap-y-1 my-2">
+                <span className="block bg-stone-300 h-0.5 w-5 mt-1.5 ml-2"></span>
+                <span className="block bg-stone-300 h-0.5 w-5 ml-2"></span>
+                <span className="block bg-stone-300 h-0.5 w-3 ml-2"></span>
               </div>
             </button>
           </div>
