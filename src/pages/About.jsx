@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="grid grid-cols-2 gap-10 w-screen">
+    <section className="grid grid-cols-2 gap-10 w-screen py-[5.4rem] md:py-[5.2rem]">
       <div>
         <h2>Our Passion for Quality</h2>
         <p>

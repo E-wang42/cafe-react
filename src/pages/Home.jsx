@@ -15,49 +15,47 @@ function Home() {
 
   return (
     <>
-      <section id="section2" className="h-full">
-        <div>
-          <div>
-            <div className="flex flex-row justify-center">
-              <div className="w-3/12 h-96 bg-hero-pattern">
-                <div className="bg-secondary-content w-80 h-72 absolute top-24 left-56 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
-                  <h2 className="text-center">
-                    MORE THAN JUST COFFEE, CUP OF INSPIRATION
-                  </h2>
-                  <a className="btn" href="#">
-                    get inspired
-                  </a>
-                </div>
-              </div>
-              <div className="md:w-8/12 h-96">
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={30}
-                  loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={false}
-                  modules={[Pagination]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide>
-                    <img
-                      className="w-full object-cover object-center"
-                      src="https://loremflickr.com/640/360"
-                      alt="hero1"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src="https://loremflickr.com/640/360" alt="hero2" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src="https://loremflickr.com/640/360" alt="hero3" />
-                  </SwiperSlide>
-                </Swiper>
-              </div>
+      <section id="section2" className="h-full py-[5.4rem] md:py-[5.2rem]">
+        <div className="flex flex-row justify-center">
+          <div className="w-3/12 h-96 bg-hero-pattern">
+            <div className="bg-secondary-content w-80 h-72 absolute top-24 left-56 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
+              <h2 className="text-center">
+                MORE THAN JUST COFFEE, CUP OF INSPIRATION
+              </h2>
+              <a className="btn" href="#">
+                get inspired
+              </a>
             </div>
-            {/* <h1
+          </div>
+          <div className="md:w-8/12 h-96">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={false}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img
+                  className="w-full object-cover object-center"
+                  src="https://loremflickr.com/640/360"
+                  alt="hero1"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://loremflickr.com/640/360" alt="hero2" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://loremflickr.com/640/360" alt="hero3" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        {/* <h1
           style={{
             transform: isInView ? "none" : "translateX(-200px)",
             opacity: isInView ? 1 : 0,
@@ -68,61 +66,56 @@ function Home() {
         >
           Panda Coffee House
         </h1> */}
-            <div className="md:inline-grid md:grid-cols-2 gap-6 grid-rows-2 max-w-full sm:flex sm:flex-col">
-              <HomeCards
-                img="src\assets\coldbrew.jpg"
-                title="TITLE HERE"
-                desc="WOEIFJ:OWIEJFOISDJOFJWE"
-                button="CLICK THIS BUTTON"
-              />
-              <HomeCards
-                img="src\assets\coldbrew.jpg"
-                title="TITLE HERE"
-                desc="WOEIFJ:OWIEJFOISDJOFJWE"
-                button="CLICK THIS BUTTON"
-              />
-              <HomeCards
-                img="src\assets\coldbrew.jpg"
-                title="TITLE HERE"
-                desc="WOEIFJ:OWIEJFOISDJOFJWE"
-                button="CLICK THIS BUTTON"
-              />
-              <HomeCards
-                img="src\assets\coldbrew.jpg"
-                title="TITLE HERE"
-                desc="WOEIFJ:OWIEJFOISDJOFJWE"
-                button="CLICK THIS BUTTON"
-              />
-            </div>
-            <div className="flex flex-row w-full">
-              <div className="flex flex-col">
-                <h2 className="">never miss an offer</h2>
-                <p className="">
-                  Sign up for our newletter and receive 15% off on your next
-                  order
-                </p>
-              </div>
-              <input
-                className="w-80 h-12"
-                type="text"
-                name="email"
-                placeholder="enter e-mail..."
-              />
-              <a className="btn" href="">
-                SIGN UP
-              </a>
-            </div>
+        <div className="md:inline-grid md:grid-cols-2 gap-6 grid-rows-2 max-w-full sm:flex sm:flex-col">
+          <HomeCards
+            img="src\assets\coldbrew.jpg"
+            title="TITLE HERE"
+            desc="WOEIFJ:OWIEJFOISDJOFJWE"
+            button="CLICK THIS BUTTON"
+          />
+          <HomeCards
+            img="src\assets\coldbrew.jpg"
+            title="TITLE HERE"
+            desc="WOEIFJ:OWIEJFOISDJOFJWE"
+            button="CLICK THIS BUTTON"
+          />
+          <HomeCards
+            img="src\assets\coldbrew.jpg"
+            title="TITLE HERE"
+            desc="WOEIFJ:OWIEJFOISDJOFJWE"
+            button="CLICK THIS BUTTON"
+          />
+          <HomeCards
+            img="src\assets\coldbrew.jpg"
+            title="TITLE HERE"
+            desc="WOEIFJ:OWIEJFOISDJOFJWE"
+            button="CLICK THIS BUTTON"
+          />
+        </div>
+        <div className="flex flex-row w-full">
+          <div className="flex flex-col">
+            <h2 className="">never miss an offer</h2>
+            <p className="">
+              Sign up for our newletter and receive 15% off on your next order
+            </p>
+          </div>
+          <input
+            className="w-80 h-12"
+            type="text"
+            name="email"
+            placeholder="enter e-mail..."
+          />
+          <a className="btn" href="">
+            SIGN UP
+          </a>
+        </div>
+        <div>
+          <img src="src\assets\pic.png" alt="mobile" />
+          <div>
+            <h2>Download the App and earn points towards your next order</h2>
             <div>
-              <img src="src\assets\pic.png" alt="mobile" />
-              <div>
-                <h2>
-                  Download the App and earn points towards your next order
-                </h2>
-                <div>
-                  <img src="src\assets\appstore.png" alt="appstore" />
-                  <img src="src\assets\playstore.png" alt="playstore" />
-                </div>
-              </div>
+              <img src="src\assets\appstore.png" alt="appstore" />
+              <img src="src\assets\playstore.png" alt="playstore" />
             </div>
           </div>
         </div>
