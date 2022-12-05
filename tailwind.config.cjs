@@ -19,7 +19,6 @@ module.exports = {
         fira: [`"Fira Sans"`, "serif"],
         roboto: ["Roboto", "serif"],
       },
-      width: {},
     },
   },
   plugins: [require("tailwindcss-debug-screens")],
