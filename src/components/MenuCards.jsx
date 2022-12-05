@@ -2,7 +2,7 @@ import React from "react";
 
 const MenuCards = (props) => {
   return (
-    <section className="text-gray-600 body-font">
+    <div className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap -m-4">
           <div className="p-4 lg:w-1/2 md:w-full">
@@ -61,7 +61,7 @@ const MenuCards = (props) => {
           <button>ORDER</button>
         </div>
       </div> */}
-    </section>
+    </div>
   );
 };
 

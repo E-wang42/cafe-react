@@ -1,19 +1,10 @@
 import React from "react";
+import PagesHero from "../components/PagesHero";
 
 function Contact() {
   return (
     <section className="text-gray-400 bg-gray-900 body-font relative py-[5.4rem] md:py-[5.2rem]">
-      <div className="flex flex-row w-full bg-hero-pattern">
-        <div className="">
-          <h2>CONTACT US</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            ipsum quidem numquam corrupti doloribus id ducimus sint eveniet.
-            Officia, quaerat?asdf
-          </p>
-        </div>
-        <img src="src/assets/pic.png" alt="contactimage" />
-      </div>
+      <PagesHero />
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           {/* -- insert maps here -- */}
@@ -47,7 +38,7 @@ function Contact() {
             Post-ironic portland shabby chic echo park, banjo fashion axe
           </p>
           <div className="relative mb-4">
-            <label for="name" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
               Name
             </label>
             <input
@@ -58,7 +49,7 @@ function Contact() {
             />
           </div>
           <div className="relative mb-4">
-            <label for="email" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
               Email
             </label>
             <input
@@ -69,7 +60,10 @@ function Contact() {
             />
           </div>
           <div className="relative mb-4">
-            <label for="message" className="leading-7 text-sm text-gray-400">
+            <label
+              htmlFor="message"
+              className="leading-7 text-sm text-gray-400"
+            >
               Message
             </label>
             <textarea
