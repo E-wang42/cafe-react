@@ -34,15 +34,17 @@ function Header() {
           id="responsiveNav"
         >
           <li className="navLinkStyle">
-            <NavLink to="/">HOME</NavLink>
+            <NavLink activeclassname="active" to="/">
+              HOME
+            </NavLink>
           </li>
-          <li className="navLinkStyle">
+          <li activeclassname="active" className="navLinkStyle">
             <NavLink to="/About">ABOUT</NavLink>
           </li>
-          <li className="navLinkStyle">
+          <li activeclassname="active" className="navLinkStyle">
             <NavLink to="/Menu">MENU</NavLink>
           </li>
-          <li className="navLinkStyle">
+          <li activeclassname="active" className="navLinkStyle">
             <NavLink to="/Contact">CONTACT</NavLink>
           </li>
         </ul>

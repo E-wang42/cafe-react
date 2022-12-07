@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
-    <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
+    <section className="h-screen w-full flex flex-col justify-center items-center bg-coffee-pastel">
       <h1 className="text-9xl font-extrabold text-white tracking-widest">
         404
       </h1>
@@ -20,7 +20,7 @@ function NotFound() {
           </Link>
         </a>
       </button>
-    </main>
+    </section>
   );
 }
 

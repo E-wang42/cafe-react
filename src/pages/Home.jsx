@@ -66,56 +66,74 @@ function Home() {
         >
           Panda Coffee House
         </h1> */}
-        <div className="md:inline-grid md:grid-cols-2 gap-6 grid-rows-2 max-w-full sm:flex sm:flex-col">
-          <HomeCards
-            img="src\assets\coldbrew.jpg"
-            title="TITLE HERE"
-            desc="WOEIFJ:OWIEJFOISDJOFJWE"
-            button="CLICK THIS BUTTON"
-          />
-          <HomeCards
-            img="src\assets\coldbrew.jpg"
-            title="TITLE HERE"
-            desc="WOEIFJ:OWIEJFOISDJOFJWE"
-            button="CLICK THIS BUTTON"
-          />
-          <HomeCards
-            img="src\assets\coldbrew.jpg"
-            title="TITLE HERE"
-            desc="WOEIFJ:OWIEJFOISDJOFJWE"
-            button="CLICK THIS BUTTON"
-          />
-          <HomeCards
-            img="src\assets\coldbrew.jpg"
-            title="TITLE HERE"
-            desc="WOEIFJ:OWIEJFOISDJOFJWE"
-            button="CLICK THIS BUTTON"
-          />
-        </div>
-        <div className="flex flex-row w-full">
-          <div className="flex flex-col">
-            <h2 className="">never miss an offer</h2>
-            <p className="">
+        <section className="max-w-[68rem] mx-auto grid place-items-center py-14">
+          <div className="md:inline-grid md:grid-cols-2 gap-6 grid-rows-2 max-w-full sm:flex sm:flex-col">
+            <HomeCards
+              img="src\assets\coldbrew.jpg"
+              title="TITLE HERE"
+              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              button="CLICK THIS BUTTON"
+            />
+            <HomeCards
+              img="src\assets\coldbrew.jpg"
+              title="TITLE HERE"
+              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              button="CLICK THIS BUTTON"
+            />
+            <HomeCards
+              img="src\assets\coldbrew.jpg"
+              title="TITLE HERE"
+              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              button="CLICK THIS BUTTON"
+            />
+            <HomeCards
+              img="src\assets\coldbrew.jpg"
+              title="TITLE HERE"
+              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              button="CLICK THIS BUTTON"
+            />
+          </div>
+        </section>
+        <div className="mb-14 mx-auto h-44 gap-2 flex flex-col md:flex-row justify-center items-center bg-stone-400 max-w-[66rem] px-8 rounded">
+          <div className="flex flex-col md:mr-auto">
+            <h2 className="text-2xl text-center font-roboto capitalize md:text-start">
+              never miss an offer
+            </h2>
+            <p className="text-center">
               Sign up for our newletter and receive 15% off on your next order
             </p>
           </div>
           <input
-            className="w-80 h-12"
+            className="w-80 h-10 bg-white rounded indent-4 outline-none"
             type="text"
             name="email"
             placeholder="enter e-mail..."
           />
-          <a className="btn" href="">
+          <a className="yellowBtn" href="#">
             SIGN UP
           </a>
         </div>
         <div>
-          <img src="src\assets\pic.png" alt="mobile" />
+          <img
+            className="max-w-[24rem]"
+            src="src\assets\pic.png"
+            alt="mobile"
+          />
           <div>
-            <h2>Download the App and earn points towards your next order</h2>
+            <h2 className="text-2xl font-roboto">
+              Download the App and earn points towards your next order
+            </h2>
             <div>
-              <img src="src\assets\appstore.png" alt="appstore" />
-              <img src="src\assets\playstore.png" alt="playstore" />
+              <img
+                className="max-w-[13rem] cursor-pointer"
+                src="src\assets\appstore.png"
+                alt="appstore"
+              />
+              <img
+                className="max-w-[16rem] cursor-pointer"
+                src="src\assets\playstore.png"
+                alt="playstore"
+              />
             </div>
           </div>
         </div>
