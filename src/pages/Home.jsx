@@ -16,21 +16,21 @@ function Home() {
   return (
     <>
       <section id="section2" className="h-full py-[5.4rem] md:py-[5.2rem]">
-        <div className="flex flex-row justify-center">
-          <div className="w-3/12 h-96 bg-hero-pattern">
-            <div className="bg-secondary-content w-80 h-72 absolute top-24 left-56 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
+        <div className="w-full flex flex-col md:flex-row justify-center">
+          <div className="hidden w-full h-36 md:h-[36rem] bg-hero-pattern md:block">
+            <div className="bg-light-coffee w-24 h-64 absolute top-24 right-24 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
               <h2 className="text-center">
                 MORE THAN JUST COFFEE, CUP OF INSPIRATION
               </h2>
-              <a className="btn" href="#">
+              <a className="yellowBtn" href="#">
                 get inspired
               </a>
             </div>
           </div>
-          <div className="md:w-8/12 h-96">
+          <div className="md:w-8/12 w-full h-[36rem]">
             <Swiper
               slidesPerView={1}
-              spaceBetween={30}
+              spaceBetween={0}
               loop={true}
               pagination={{
                 clickable: true,
@@ -39,20 +39,26 @@ function Home() {
               modules={[Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <img
-                  className="w-full object-cover object-center"
-                  src="https://loremflickr.com/640/360"
-                  alt="hero1"
-                />
+              <SwiperSlide id="slide1">
+                <img src="src/assets/hero1.jpg" alt="hero1" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://loremflickr.com/640/360" alt="hero2" />
+                <img src="src/assets/hero2.jpg" alt="hero2" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://loremflickr.com/640/360" alt="hero3" />
+                <img src="src/assets/hero3.jpg" alt="hero3" />
               </SwiperSlide>
             </Swiper>
+          </div>
+        </div>
+        <div className="w-full h-36 md:h-[36rem] bg-hero-pattern md:hidden">
+          <div className="bg-light-coffee w-44 h-64 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
+            <h2 className="text-center">
+              MORE THAN JUST COFFEE, CUP OF INSPIRATION
+            </h2>
+            <a className="yellowBtn" href="#">
+              get inspired
+            </a>
           </div>
         </div>
         {/* <h1

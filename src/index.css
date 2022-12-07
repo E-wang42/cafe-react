@@ -59,8 +59,6 @@ button {
 
 .mySwiper {
   /* outline: 1px solid red; */
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
   text-align: center;
@@ -76,4 +74,9 @@ button {
 
 .active {
   @apply bg-light-coffee text-white font-extrabold p-2 rounded;
+}
+
+#slide1 {
+  object-fit: cover;
+  object-position: center;
 }
