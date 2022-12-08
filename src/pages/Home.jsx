@@ -18,9 +18,9 @@ function Home() {
       <section id="section2" className="h-full py-[4.3rem] md:py-[5.2rem]">
         <div className="w-full flex flex-col md:flex-row justify-center">
           <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
-            <div className="bg-light-coffee w-24 h-64 absolute top-24 right-24 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
-              <h2 className="text-center capitalize font-roboto text-white">
-                MORE THAN JUST COFFEE, CUP OF INSPIRATION
+            <div className="bg-light-coffee w-[22rem] h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded-lg p-10">
+              <h2 className="text-center capitalize font-roboto text-white text-2xl">
+                more than just coffee, it's your cup of inspiration.
               </h2>
               <a className="yellowBtn" href="#">
                 Get Inspired
@@ -87,27 +87,27 @@ function Home() {
         <section className="max-w-[68rem] mx-auto grid place-items-center py-14">
           <div className="md:inline-grid md:grid-cols-2 gap-6 grid-rows-2 max-w-full sm:flex sm:flex-col">
             <HomeCards
-              img="src\assets\coldbrew.jpg"
+              img="src\assets\coffeepour.jpg"
               title="TITLE HERE"
-              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              desc="Epoch operations bogus, streamlining morrow shelf maples courtiers meditates divers entrance fleas, actinium rapids repairer keen sleepers unrestrictedly perceptually punish, floater hounds coastal."
               button="CLICK THIS BUTTON"
             />
             <HomeCards
-              img="src\assets\coldbrew.jpg"
-              title="TITLE HERE"
-              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              img="src\assets\findtrue.png"
+              title="discover taste true to you"
+              desc="Blazers artifact nationally wastefulness than resisting alcove whisked actuator, societies merger heathen appertains unties reaper antiquity resenting waltz, pressure marshals acne jig optionally. "
               button="CLICK THIS BUTTON"
             />
             <HomeCards
-              img="src\assets\coldbrew.jpg"
-              title="TITLE HERE"
-              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              img="src\assets\teas.jpg"
+              title="shop tea"
+              desc="Unending driver relationship twilight, masturbates growling fate stragglers atypically lightness compartmentalized, indices powdered crochet havoc smokers shortcut airstrips figurative, concentrators."
               button="CLICK THIS BUTTON"
             />
             <HomeCards
-              img="src\assets\coldbrew.jpg"
-              title="TITLE HERE"
-              desc="WOEIFJ:OWIEJFOISDJOFJWE"
+              img="src\assets\beans.jpg"
+              title="shop coffee"
+              desc="Terminating impetuously epidemics amplify recesses banish, mistakion combinations armstrong inserted sneeze achievements signers."
               button="CLICK THIS BUTTON"
             />
           </div>

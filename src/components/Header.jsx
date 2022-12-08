@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 function Header() {
   const [showNav, setShowNav] = useState(false);
+  const linkClicked = useRef();
 
   return (
     <header className="text-gray-400 bg-dark-coffee body-font block z-50 fixed w-full">
@@ -28,7 +29,7 @@ function Header() {
         </div>
 
         <ul
-          className={`z-10 bg-dark-coffee px-16 py-20 md:p-0 absolute ${
+          className={`z-10 bg-dark-coffee px-16 md:p-0 absolute h-screen md:h-10 ${
             showNav ? "flex" : "hidden"
           } flex-col gap-y-12 items-start justify-center md:relative left-0 top-20 md:inset-0 mx-auto md:flex md:flex-row md:items-center text-base`}
           id="responsiveNav"
