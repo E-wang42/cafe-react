@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import HomeCards from "../components/HomeCards";
 
 function Home() {
@@ -15,19 +15,19 @@ function Home() {
 
   return (
     <>
-      <section id="section2" className="h-full py-[5.4rem] md:py-[5.2rem]">
+      <section id="section2" className="h-full py-[4.3rem] md:py-[5.2rem]">
         <div className="w-full flex flex-col md:flex-row justify-center">
-          <div className="hidden w-full h-36 md:h-[36rem] bg-hero-pattern md:block">
+          <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
             <div className="bg-light-coffee w-24 h-64 absolute top-24 right-24 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
-              <h2 className="text-center">
+              <h2 className="text-center capitalize font-roboto text-white">
                 MORE THAN JUST COFFEE, CUP OF INSPIRATION
               </h2>
               <a className="yellowBtn" href="#">
-                get inspired
+                Get Inspired
               </a>
             </div>
           </div>
-          <div className="md:w-8/12 w-full h-[36rem]">
+          <div className="md:w-8/12 w-full h-[26rem] md:h-[32rem]">
             <Swiper
               slidesPerView={1}
               spaceBetween={0}
@@ -35,28 +35,40 @@ function Home() {
               pagination={{
                 clickable: true,
               }}
-              navigation={false}
-              modules={[Pagination]}
+              navigation={true}
+              modules={[Pagination, Navigation]}
               className="mySwiper"
             >
-              <SwiperSlide id="slide1">
-                <img src="src/assets/hero1.jpg" alt="hero1" />
+              <SwiperSlide>
+                <img
+                  className="carouselImage"
+                  src="src/assets/hero1.jpg"
+                  alt="hero1"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="src/assets/hero2.jpg" alt="hero2" />
+                <img
+                  className="carouselImage"
+                  src="src/assets/hero2.jpg"
+                  alt="hero2"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="src/assets/hero3.jpg" alt="hero3" />
+                <img
+                  className="carouselImage"
+                  src="src/assets/hero3.jpg"
+                  alt="hero3"
+                />
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
-        <div className="w-full h-36 md:h-[36rem] bg-hero-pattern md:hidden">
-          <div className="bg-light-coffee w-44 h-64 z-10 flex flex-col justify-center items-center gap-16 rounded-lg">
-            <h2 className="text-center">
-              MORE THAN JUST COFFEE, CUP OF INSPIRATION
+        <div className="w-full h-80 bg-hero-pattern md:hidden py-8">
+          <div className="bg-light-coffee p-6 ml-8 w-60 h-64 z-10 flex flex-col justify-center items-center gap-y-12 rounded-lg">
+            <h2 className="text-center capitalize font-roboto text-white text-xl">
+              more than just coffee, it's your cup of inspiration.
             </h2>
-            <a className="yellowBtn" href="#">
+            <a className="yellowBtn capitalize" href="#">
               get inspired
             </a>
           </div>
