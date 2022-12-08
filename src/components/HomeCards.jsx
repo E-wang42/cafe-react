@@ -2,7 +2,7 @@ import React from "react";
 
 function HomeCards(props) {
   return (
-    <div className="p-8 max-w-[32rem] bg-light-coffee flex-col flex gap-y-6">
+    <div className="p-8 max-w-[32rem] bg-light-coffee flex-col flex gap-y-6 mb-16 md:mb-0">
       <div>
         <img
           className="w-full h-80 object-cover object-center"
