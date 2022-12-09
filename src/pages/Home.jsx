@@ -23,7 +23,7 @@ function Home() {
                 more than just coffee, it's your cup of inspiration.
               </h2>
               <a className="yellowBtn" href="#">
-                Get Inspired
+                Get Inspired →
               </a>
             </div>
           </div>
@@ -69,7 +69,7 @@ function Home() {
               more than just coffee, it's your cup of inspiration.
             </h2>
             <a className="yellowBtn capitalize" href="#">
-              get inspired
+              get inspired →
             </a>
           </div>
         </div>
@@ -85,74 +85,83 @@ function Home() {
           Panda Coffee House
         </h1> */}
         <section className="max-w-[68rem] mx-auto grid md:place-items-center py-14">
-          <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full sm:flex sm:flex-col sm:place-items-center">
+          <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full flex flex-col justify-center items-center">
             <HomeCards
               img="src\assets\coffeepour.jpg"
               title="TITLE HERE"
               desc="Epoch operations bogus, streamlining morrow shelf maples courtiers meditates divers entrance fleas, actinium rapids repairer keen sleepers unrestrictedly perceptually punish, floater hounds coastal."
-              button="CLICK THIS BUTTON"
+              button="CLICK THIS BUTTON →"
             />
             <HomeCards
               img="src\assets\findtrue.png"
               title="discover taste true to you"
               desc="Blazers artifact nationally wastefulness than resisting alcove whisked actuator, societies merger heathen appertains unties reaper antiquity resenting waltz, pressure marshals acne jig optionally. "
-              button="CLICK THIS BUTTON"
+              button="Discover More →"
             />
             <HomeCards
               img="src\assets\teas.jpg"
               title="shop tea"
               desc="Unending driver relationship twilight, masturbates growling fate stragglers atypically lightness compartmentalized, indices powdered crochet havoc smokers shortcut airstrips figurative, concentrators."
-              button="CLICK THIS BUTTON"
+              button="All Tea →"
             />
             <HomeCards
               img="src\assets\beans.jpg"
               title="shop coffee"
-              desc="Terminating impetuously epidemics amplify recesses banish, mistakion combinations armstrong inserted sneeze achievements signers."
-              button="CLICK THIS BUTTON"
+              desc="Terminating impetuously epidemics amplify recesses atypically lightness compartmentalized banish, mistakion combinations armstrong inserted sneeze achievements signers."
+              button="All Coffee →"
             />
           </div>
         </section>
-        <div className="mb-14 mx-auto h-44 gap-2 flex flex-col md:flex-row justify-center items-center bg-stone-400 max-w-[66rem] px-8 rounded">
-          <div className="flex flex-col md:mr-auto">
-            <h2 className="text-2xl text-center font-roboto capitalize md:text-start">
+
+        <div className="mb-14 rounded mx-auto h-44 gap-2 flex flex-col md:flex-row justify-center items-center bg-dark-coffee max-w-[68rem] px-8">
+          <div className="flex flex-col justify-center md:mr-auto">
+            <h2 className="text-2xl text-center font-roboto capitalize md:text-start text-white">
               never miss an offer
             </h2>
-            <p className="text-center">
+            <p className="text-center text-white">
               Sign up for our newletter and receive 15% off on your next order
             </p>
           </div>
-          <input
-            className="w-80 h-10 bg-white rounded indent-4 outline-none"
-            type="text"
-            name="email"
-            placeholder="enter e-mail..."
-          />
-          <a className="yellowBtn" href="#">
-            SIGN UP
-          </a>
+          <div className="flex flex-col justify-center items-center md:items-start gap-y-2 md:flex-row md:gap-x-2 md:gap-y-0">
+            <input
+              className="w-80 h-10 bg-white rounded indent-4 outline-none"
+              type="text"
+              name="email"
+              placeholder="enter e-mail..."
+            />
+            <a className="yellowBtn w-24 text-center" href="#">
+              SIGN UP
+            </a>
+          </div>
         </div>
-        <div>
+
+        <div className="md:p-8 rounded-lg max-w-[68rem] mx-auto flex md:flex-row justify-center items-center text-center bg-light-coffee">
           <img
-            className="max-w-[24rem]"
+            className="hidden md:block -mt-72"
             src="src\assets\pic.png"
             alt="mobile"
           />
-          <div>
-            <h2 className="text-2xl font-roboto">
+          <div className="p-8 flex flex-col justify-center items-center gap-y-8">
+            <h2 className="text-4xl font-roboto text-white capitalize md:text-start leading-tight">
               Download the App and earn points towards your next order
             </h2>
-            <div>
+            <div className="flex flex-row">
               <img
-                className="max-w-[13rem] cursor-pointer"
+                className="max-w-[14rem] h-[3.8rem] cursor-pointer mt-3"
                 src="src\assets\appstore.png"
                 alt="appstore"
               />
               <img
-                className="max-w-[16rem] cursor-pointer"
+                className="max-w-[13.5rem] h-[5.5rem] cursor-pointer"
                 src="src\assets\playstore.png"
                 alt="playstore"
               />
             </div>
+            <p className="text-white text-sm md:text-start">
+              Apple and the Apple logo are trademarks of Apple Inc., registered
+              in the U.S. and other countries. App Store is a service mark of
+              Apple Inc. Google Play is a trademark of Google Inc. Terms apply.
+            </p>
           </div>
         </div>
       </section>
