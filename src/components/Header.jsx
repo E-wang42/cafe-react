@@ -6,7 +6,7 @@ function Header() {
   const linkClicked = useRef();
 
   return (
-    <header className="text-gray-400 bg-dark-coffee body-font block z-50 fixed w-full">
+    <header className="text-gray-400 bg-dark-coffee body-font block z-50 fixed w-full shadow-xl">
       <nav className="contanier mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
         <div className="md:hidden">
           <button onClick={() => setShowNav(!showNav)}>

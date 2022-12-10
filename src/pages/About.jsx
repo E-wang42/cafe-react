@@ -8,9 +8,14 @@ function About() {
       <section className="w-full py-[5.4rem] md:py-[5.2rem]">
         <PagesHero />
         <div className="w-11/12 py-48 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-24 md:gap-y-96 gap-x-10 md:max-w-[68rem] mx-auto">
-          <div className="block md:hidden">
-            <img className="h-24 w-24" src="src/assets/pic.png" alt="barista" />
-          </div>
+          <figure className="w-full md:hidden">
+            <img
+              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
+              src="src\assets\barista.png"
+              alt="barista"
+            />
+            <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
+          </figure>
           <div className="flex flex-col gap-y-2 pb-12">
             <h2 className="font-roboto text-3xl md:text-4xl">
               Passion for Quality
@@ -22,12 +27,15 @@ function About() {
             </p>
           </div>
 
-          <div className="hidden md:block">
-            <img className="h-24 w-24" src="src/assets/pic.png" alt="barista" />
-          </div>
-          <div>
-            <img className="h-24 w-24" src="src/assets/pic.png" alt="barista" />
-          </div>
+          <figure className="w-full md:block">
+            <img
+              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 -translate-x-14 object-cover object-center"
+              src="src/assets/barista3.jpg"
+              alt="barista"
+            />
+            <span className="bg-sky-600 w-full bg-opacity-80 h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
+          </figure>
+
           <div className="flex flex-col gap-y-2 pb-12">
             <h2 className="font-roboto text-3xl md:text-4xl">
               Commitment to Craft
@@ -39,8 +47,13 @@ function About() {
             </p>
           </div>
 
-          <div className="block md:hidden">
-            <img className="h-24 w-24" src="src/assets/pic.png" alt="barista" />
+          <div className="w-full md:hidden">
+            <img
+              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
+              src="src/assets/barista2.jpg"
+              alt="barista"
+            />
+            <span className="bg-amber-500 bg-opacity-70 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
           </div>
           <div className="flex flex-col gap-y-2 pb-12">
             <h2 className="font-roboto text-3xl md:text-4xl">
@@ -68,7 +81,13 @@ function About() {
             reeled babies sixteenth. Regulators reticulating calculation
             overlooked, abating tendencies readability sketched cogent.
           </p>
-          <video className="w-full" playsInline autoPlay muted loop>
+          <video
+            className="w-full rounded shadow-2xl"
+            playsInline
+            autoPlay
+            muted
+            loop
+          >
             <source src="src/assets/video.mp4" type="video/mp4" />
           </video>
         </div>
