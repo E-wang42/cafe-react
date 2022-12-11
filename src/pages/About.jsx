@@ -7,16 +7,16 @@ function About() {
       {/* <figure className="absolute bg-light-coffee w-full h-96 top-[125.5%] -z-10"></figure> */}
       <section className="w-full py-[5.4rem] md:py-[5.2rem]">
         <PagesHero />
-        <div className="w-11/12 py-48 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-24 md:gap-y-96 gap-x-10 md:max-w-[68rem] mx-auto">
+        <div className="w-11/12 py-40 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-96 gap-x-10 md:max-w-[68rem] mx-auto">
           <figure className="w-full md:hidden">
             <img
-              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
+              className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
               src="src\assets\barista.png"
               alt="barista"
             />
             <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
           </figure>
-          <div className="flex flex-col gap-y-2 pb-12">
+          <div className="flex flex-col gap-y-2 pb-36">
             <h2 className="font-roboto text-3xl md:text-4xl">
               Passion for Quality
             </h2>
@@ -29,14 +29,14 @@ function About() {
 
           <figure className="w-full md:block">
             <img
-              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 -translate-x-14 object-cover object-center"
+              className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 -translate-x-14 object-cover object-center"
               src="src/assets/barista3.jpg"
               alt="barista"
             />
             <span className="bg-sky-600 w-full bg-opacity-80 h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
           </figure>
 
-          <div className="flex flex-col gap-y-2 pb-12">
+          <div className="flex flex-col gap-y-2 pb-36">
             <h2 className="font-roboto text-3xl md:text-4xl">
               Commitment to Craft
             </h2>
@@ -49,13 +49,16 @@ function About() {
 
           <div className="w-full md:hidden">
             <img
-              className="w-[max(20rem,10rem)] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
+              className="w-[max(20rem,10rem)] max-h-[25rem] drop-shadow-lg shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
               src="src/assets/barista2.jpg"
               alt="barista"
             />
-            <span className="bg-amber-500 bg-opacity-70 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
+            <span
+              id="backdrop"
+              className="bg-amber-500 bg-opacity-70 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"
+            ></span>
           </div>
-          <div className="flex flex-col gap-y-2 pb-12">
+          <div className="flex flex-col gap-y-2 pb-8">
             <h2 className="font-roboto text-3xl md:text-4xl">
               Taste That Inspires
             </h2>
@@ -82,7 +85,7 @@ function About() {
             overlooked, abating tendencies readability sketched cogent.
           </p>
           <video
-            className="w-full rounded shadow-2xl"
+            className="w-full rounded shadow-2xl drop-shadow-lg"
             playsInline
             autoPlay
             muted
