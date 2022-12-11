@@ -21,7 +21,7 @@ function Header() {
           <img
             className="w-11 h-11 p-1 object-center bg-[#A5662A] rounded-full"
             src="src/assets/logo.jpg"
-            alt=""
+            alt="logo"
           />
           <span className="ml-3 text-xl md:text-3xl font-cormorant">
             Panda Coffee House

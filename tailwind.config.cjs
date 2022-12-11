@@ -7,7 +7,7 @@ module.exports = {
         "hero-pattern": "url('/src/assets/bg-pattern.jpg')",
       },
       colors: {
-        "light-coffee": "#be4632",
+        "light-coffee": "#955c26",
         "medium-coffee": "#6d2f2c",
         "dark-coffee": "#1f1919",
         "light-grey": "#e6e6e6",
