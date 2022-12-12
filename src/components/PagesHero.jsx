@@ -3,31 +3,33 @@ import React from "react";
 function PagesHero(props) {
   return (
     <>
-      <div className="flex flex-row w-full bg-hero-pattern h-[26rem]">
-        <h2 className="text-7xl">TITLE GOES HERE</h2>
-        <div className="flex flex-col justify-between items-center">
-          <p>
-            Nibblers agreeing calcium interspersed muddles drowning sharp
-            repudiation, fiddling axiomatization unfamiliarity poorer seems
-            tarry underplayed mailbox, firewood grieve flirting inflationary
-            payoff. Diplomats convex daisy speech, fringe every encourage
-            bremsstrahlung jade reduced requisition literals, tempering
-          </p>
-          <p>
-            crushing boisterously concretion arguing swish nineties browning,
-            soiling dells. Unreasonable recovery concluded introductions bespeak
-            personalize, teases nines discoverers cisterns splashed
-          </p>
-          <p>
-            At tempore repudiandae sunt itaque sed impedit deserunt ullam
-            laboriosam
-          </p>
+      <div className="w-full bg-hero-pattern h-[26rem]">
+        <div className="w-11/12 mx-auto md:flex md:flex-row md:max-w-[68rem] md:justify-between md:items-center md:translate-y-10">
+          <h2 className="text-6xl font-roboto text-dark-coffee font-medium">
+            {props.title}
+          </h2>
+          <div className="flex flex-col flex-shrink flex-wrap justify-between items-start">
+            <p id="para" className="whitespace-pre-line md:mb-2">
+              Nibblers agreeing calcium interspersed muddles drowning sharp
+              repudiation, fiddling axiomatization unfamiliarity poorer seems
+              tarry underplayed mailbox.
+            </p>
+            <p id="para" className="whitespace-pre-line md:mb-2">
+              crushing boisterously concretion arguing swish nineties browning,
+              soiling dells. Unreasonable recovery concluded introductions
+              bespeak personalize.
+            </p>
+            <p id="para" className="text-sm whitespace-pre">
+              At tempore repudiandae sunt itaque sed impedit deserunt ullam
+              laboriosam
+            </p>
+          </div>
         </div>
       </div>
       <div className="w-11/12 mx-auto md:max-w-[68rem] h-72 z-10 -mt-36">
         <img
-          className="h-full w-full object-cover object-center"
-          src="https://i.ibb.co/xFPGN2d/url.jpg"
+          className="h-full w-full object-cover object-center rounded"
+          src={props.image}
           alt="pagesheroimage"
         />
       </div>

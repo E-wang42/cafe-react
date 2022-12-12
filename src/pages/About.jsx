@@ -6,12 +6,12 @@ function About() {
     <>
       {/* <figure className="absolute bg-light-coffee w-full h-96 top-[125.5%] -z-10"></figure> */}
       <section className="w-full py-[5.4rem] md:py-[5.2rem]">
-        <PagesHero />
+        <PagesHero title="About Us" image="src/assets/aboutBanner.jpg" />
         <div className="w-11/12 py-40 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
           <figure className="w-full md:hidden">
             <img
               className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
-              src="src\assets\barista.png"
+              src="src/assets/barista.jpg"
               alt="barista"
             />
             <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
@@ -30,7 +30,7 @@ function About() {
           <div className="hidden md:block">
             <img
               className="max-w-[24rem] h-[30rem] object-cover object-center translate-x-28"
-              src="src\assets\barista.png"
+              src="src\assets\barista.jpg"
               alt="barista"
             />
             <span className="bg-orange-600 bg-opacity-80 w-full h-[20rem] -mt-72 block -z-10 mx-auto rounded shadow-sm"></span>

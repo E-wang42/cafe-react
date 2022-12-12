@@ -34,18 +34,27 @@ function Header() {
           } flex-col gap-y-12 items-start justify-center md:relative left-0 top-20 md:inset-0 mx-auto md:flex md:flex-row md:items-center text-base`}
           id="responsiveNav"
         >
-          <li className="navLinkStyle">
+          <li className="navLinkStyle font-roboto text-lg">
             <NavLink activeclassname="active" to="/">
               HOME
             </NavLink>
           </li>
-          <li activeclassname="active" className="navLinkStyle">
+          <li
+            activeclassname="active"
+            className="navLinkStyle font-roboto text-lg"
+          >
             <NavLink to="/About">ABOUT</NavLink>
           </li>
-          <li activeclassname="active" className="navLinkStyle">
+          <li
+            activeclassname="active"
+            className="navLinkStyle font-roboto text-lg"
+          >
             <NavLink to="/Menu">MENU</NavLink>
           </li>
-          <li activeclassname="active" className="navLinkStyle">
+          <li
+            activeclassname="active"
+            className="navLinkStyle font-roboto text-lg"
+          >
             <NavLink to="/Contact">CONTACT</NavLink>
           </li>
         </ul>
