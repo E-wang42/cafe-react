@@ -84,7 +84,7 @@ function Home() {
         >
           Panda Coffee House
         </h1> */}
-        <section className="max-w-[68rem] mx-auto grid md:place-items-center py-14">
+        <section className="w-11/12 md:max-w-[68rem] mx-auto grid md:place-items-center py-14">
           <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full flex flex-col justify-center items-center">
             <HomeCards
               img="src\assets\coffeepour.jpg"

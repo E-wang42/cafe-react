@@ -11,8 +11,10 @@ function HomeCards(props) {
         />
       </div>
       <div>
-        <h2 className="font-roboto text-2xl uppercase">{props.title}</h2>
-        <p>{props.desc}</p>
+        <h2 className="font-roboto text-2xl uppercase text-white tracking-wider">
+          {props.title}
+        </h2>
+        <p className="text-neutral-300">{props.desc}</p>
       </div>
       <div>
         <a href="#" className="yellowBtn">
