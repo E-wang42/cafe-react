@@ -1,6 +1,6 @@
 import React from "react";
 
-function PagesHero(props) {
+function PagesBanner(props) {
   return (
     <>
       <div className="w-full bg-hero-pattern h-[26rem]">
@@ -37,4 +37,4 @@ function PagesHero(props) {
   );
 }
 
-export default PagesHero;
+export default PagesBanner;

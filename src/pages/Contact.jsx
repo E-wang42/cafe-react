@@ -1,5 +1,5 @@
 import React from "react";
-import PagesHero from "../components/PagesHero";
+import PagesHero from "../components/PagesBanner";
 import { useLoadScript } from "@react-google-maps/api";
 import Maps from "../components/Maps";
 

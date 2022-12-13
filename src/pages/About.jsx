@@ -1,12 +1,12 @@
 import React from "react";
-import PagesHero from "../components/PagesHero";
+import PagesBanner from "../components/PagesBanner";
 
 function About() {
   return (
     <>
       {/* <figure className="absolute bg-light-coffee w-full h-96 top-[125.5%] -z-10"></figure> */}
       <section className="w-full py-[5.4rem] md:py-[5.2rem]">
-        <PagesHero title="About Us" image="src/assets/aboutBanner.jpg" />
+        <PagesBanner title="About Us" image="src/assets/aboutBanner.jpg" />
         <div className="w-11/12 py-40 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
           <figure className="w-full md:hidden">
             <img
