@@ -39,23 +39,20 @@ function Header() {
               HOME
             </NavLink>
           </li>
-          <li
-            activeclassname="active"
-            className="navLinkStyle font-roboto text-lg"
-          >
-            <NavLink to="/About">ABOUT</NavLink>
+          <li className="navLinkStyle font-roboto text-lg">
+            <NavLink activeclassname="active" to="/About">
+              ABOUT
+            </NavLink>
           </li>
-          <li
-            activeclassname="active"
-            className="navLinkStyle font-roboto text-lg"
-          >
-            <NavLink to="/Menu">MENU</NavLink>
+          <li className="navLinkStyle font-roboto text-lg">
+            <NavLink activeclassname="active" to="/Menu">
+              MENU
+            </NavLink>
           </li>
-          <li
-            activeclassname="active"
-            className="navLinkStyle font-roboto text-lg"
-          >
-            <NavLink to="/Contact">CONTACT</NavLink>
+          <li className="navLinkStyle font-roboto text-lg">
+            <NavLink activeclassname="active" to="/Contact">
+              CONTACT
+            </NavLink>
           </li>
         </ul>
 
