@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import "../assets/hero1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import HomeCards from "../components/HomeCards";
 
 function Home() {
@@ -29,14 +27,17 @@ function Home() {
           </div>
           <div className="md:w-8/12 w-full h-[26rem] md:h-[32rem]">
             <Swiper
+              id="swiperColor"
               slidesPerView={1}
               spaceBetween={0}
+              centeredSlides={true}
               loop={true}
+              autoplay={{ delay: 4500, disableOnInteraction: false }}
               pagination={{
                 clickable: true,
               }}
               navigation={true}
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation, Autoplay]}
               className="mySwiper"
             >
               <SwiperSlide>
