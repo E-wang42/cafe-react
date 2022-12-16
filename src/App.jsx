@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -6,12 +7,11 @@ import Menu from "./pages/Menu";
 import NotFound from "./pages/404";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <>
-      <CartProvider value="meow">
+      <CartProvider>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
