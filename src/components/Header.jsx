@@ -1,15 +1,45 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Cart from "./Cart";
 
 function Header() {
   const [showNav, setShowNav] = useState(false);
   const [showCart, setShowCart] = useState(false);
-  const linkClicked = useRef();
+  const navRef = useRef(null);
+  const cartRef = useRef(null);
+
+  function closeCart(e) {
+    if (!cartRef.current.contains(e.target)) {
+      setShowCart(false);
+    }
+  }
+
+  function closeNav(e) {
+    if (!navRef.current.contains(e.target)) {
+      setShowNav(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeCart);
+    return () => {
+      document.removeEventListener("mousedown", closeCart);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeNav);
+    return () => {
+      document.removeEventListener("mousedown", closeNav);
+    };
+  }, []);
 
   return (
     <header className="text-gray-400 bg-dark-coffee body-font block z-50 fixed w-full shadow-xl">
-      <nav className="contanier mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between">
+      <nav
+        ref={cartRef}
+        className="contanier mx-auto flex flex-wrap p-5 md:flex-row items-center justify-between"
+      >
         <div className="md:hidden">
           <button onClick={() => setShowNav(!showNav)}>
             <div className="w-9 h-7 shadow bg-stone-700 rounded focus:outline-none hover:bg-stone-600 flex flex-col gap-y-1 my-2">
@@ -31,6 +61,7 @@ function Header() {
         </div>
 
         <ul
+          ref={navRef}
           className={`z-10 bg-dark-coffee px-16 md:p-0 absolute h-screen md:h-10 ${
             showNav ? "flex" : "hidden"
           } flex-col gap-y-12 items-start justify-center md:relative left-0 top-20 md:inset-0 mx-auto md:flex md:flex-row md:items-center text-base`}

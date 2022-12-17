@@ -5,8 +5,6 @@ import PagesBanner from "../components/PagesBanner";
 import { CartContext } from "../context/CartContext";
 
 function Menu() {
-  const [modal, setModal] = useState(false);
-  const closeModal = useRef(null);
   const contextValue = useContext(CartContext);
 
   return (
@@ -16,9 +14,7 @@ function Menu() {
         title="Order Online or On The App"
       />
       <MenuCards />
-      <button onClick={() => setModal(!modal)} className="yellowBtn">
-        Modal
-      </button>
+      <button className="yellowBtn">Modal</button>
 
       <div>{contextValue}</div>
       {/* <div className="opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 grid place-items-center">
