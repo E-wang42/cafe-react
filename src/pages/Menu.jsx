@@ -1,6 +1,4 @@
-import React, { useState, useRef } from "react";
-import { useContext } from "react";
-import MenuCards from "../components/MenuCards";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import PagesBanner from "../components/PagesBanner";
 import { CartContext } from "../context/CartContext";
 
@@ -13,14 +11,10 @@ function Menu() {
         image="src/assets/menuBanner.png"
         title="Order Online or On The App"
       />
-      <MenuCards />
-      <button className="yellowBtn">Modal</button>
-
+      <div className="w-11/12 md:max-w-[68rem] h-full">
+        {/* menu component goes in here */}
+      </div>
       <div>{contextValue}</div>
-      {/* <div className="opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 grid place-items-center">
-        <div className="absolute w-full h-full bg-gray-900 opacity-50"></div>
-        <div className="bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"></div>
-      </div> */}
     </section>
   );
 }
