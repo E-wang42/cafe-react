@@ -1,11 +1,9 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
-  return (
-    <CartContext.Provider value={"I AM USING CONTEXT MEOW"}>
-      {children}
-    </CartContext.Provider>
-  );
+  const [items, setItems] = useState([]);
+
+  return <CartContext.Provider value={{}}>{children}</CartContext.Provider>;
 };
