@@ -1,6 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 export const MenuCards = (props) => {
+  const { addToCart } = useContext(CartContext);
   return (
     <div className="w-96 flex flex-row ring-2">
       <div className="bg-sky-700 w-full grid place-items-center">
@@ -12,7 +15,9 @@ export const MenuCards = (props) => {
           <h2>{props.price}</h2>
         </div>
         <p className="text-sm w-full">{props.desc}</p>
-        <button className="yellowBtn">Add to Order</button>
+        <button className="yellowBtn" onClick={() => addToCart(props.id)}>
+          Add to Order
+        </button>
       </div>
     </div>
   );
