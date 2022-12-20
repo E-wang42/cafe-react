@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import menuData from "../data/menuData.json";
 
-export const CartContext = createContext({});
+export const CartContext = createContext(null);
 
 const defaultCartData = () => {
   let cart = {};
@@ -13,6 +13,7 @@ const defaultCartData = () => {
 
 export const CartProvider = (props) => {
   const [drinks, setDrinks] = useState(defaultCartData);
+  const drinksArray = Object.values(drinks);
 
   const cartTotal = () => {
     let total = 0;
@@ -43,9 +44,21 @@ export const CartProvider = (props) => {
     });
   };
 
+  const cartQuantity = drinksArray.reduce(
+    (quantity, item) => quantity + item,
+    0
+  );
+
   return (
     <CartContext.Provider
-      value={{ drinks, addToCart, removeFromCart, cartInputUpdate, cartTotal }}
+      value={{
+        drinks,
+        addToCart,
+        removeFromCart,
+        cartInputUpdate,
+        cartTotal,
+        cartQuantity,
+      }}
     >
       {props.children}
     </CartContext.Provider>

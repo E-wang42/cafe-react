@@ -9,11 +9,14 @@ function Cart() {
 
   return (
     <div className="w-3/4 sm:w-1/2 md:w-1/4 h-screen bg-dark-coffee p-4 absolute top-[5.2rem] right-0 z-50">
-      {/* <div className="absolute z-10 bg-white w-screen h-screen"></div> */}
       <div className="w-full h-full bg-pastel-coffee pt-6">
         {menuData.map((item) => {
           if (drinks[item.id] > 0) {
-            return <CartItems data={item} {...item} />;
+            return (
+              <div key={item.id}>
+                <CartItems data={item} {...item} />
+              </div>
+            );
           }
         })}
         {priceTotal > 0 ? (

@@ -1,10 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { NavLink } from "react-router-dom";
 import Cart from "./Cart";
 
 function Header() {
   const [showNav, setShowNav] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const { cartQuantity } = useContext(CartContext);
   const navRef = useRef(null);
   const cartRef = useRef(null);
 
@@ -101,9 +103,14 @@ function Header() {
           >
             <path d="M1 1.75A.75.75 0 011.75 1h1.628a1.75 1.75 0 011.734 1.51L5.18 3a65.25 65.25 0 0113.36 1.412.75.75 0 01.58.875 48.645 48.645 0 01-1.618 6.2.75.75 0 01-.712.513H6a2.503 2.503 0 00-2.292 1.5H17.25a.75.75 0 010 1.5H2.76a.75.75 0 01-.748-.807 4.002 4.002 0 012.716-3.486L3.626 2.716a.25.25 0 00-.248-.216H1.75A.75.75 0 011 1.75zM6 17.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
           </svg>
-          {/* <span className="inline-block rounded-full h-5 w-5 bg-stone-300 absolute mt-7 -ml-5">
-            <h2 className="text-black font-roboto font-bold text-sm">{}</h2>
-          </span> */}
+
+          {cartQuantity > 0 ? (
+            <span className="inline-block rounded-full h-5 w-5 bg-stone-300 absolute mt-7 -ml-5">
+              <h2 className="text-black font-roboto font-bold text-sm">
+                {cartQuantity}
+              </h2>
+            </span>
+          ) : null}
         </button>
         {showCart ? <Cart /> : null}
       </nav>
