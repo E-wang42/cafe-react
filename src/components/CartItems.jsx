@@ -8,7 +8,7 @@ export const CartItems = (props) => {
   return (
     <div
       key={props.id}
-      className="w-10/12 h-32 bg-light-coffee rounded flex flex-row justify-center gap-x-1 mx-auto"
+      className="w-10/12 h-32 bg-light-coffee rounded mb-4 flex flex-row justify-center gap-x-1 mx-auto"
     >
       <div className="flex items-center">
         <img className="w-10 h-10" src={props.imgUrl} alt="drink" />
