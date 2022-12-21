@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import menuData from "../data/menuData.json";
 
 export const CartContext = createContext(null);
@@ -12,8 +12,16 @@ const defaultCartData = () => {
 };
 
 export const CartProvider = (props) => {
-  const [drinks, setDrinks] = useState(defaultCartData);
+  const [drinks, setDrinks] = useState(defaultCartData, () => {
+    const localData = window.localStorage.getItem("my_cart_items");
+    return localData ? JSON.parse(localData) : [];
+  });
+
   const drinksArray = Object.values(drinks);
+
+  useEffect(() => {
+    window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
+  }, [drinks]);
 
   const cartTotal = () => {
     let total = 0;

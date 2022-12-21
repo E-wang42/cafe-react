@@ -11,9 +11,9 @@ function Menu() {
         title="Order Online or On The App"
       />
       <div className="container w-11/12 md:max-w-[68rem] h-full mx-auto grid place-items-center">
-        <div className="flex flex-wrap flex-col justify-center items-center md:grid md:grid-cols-2 md:grid-rows-3 md:gap-4">
+        <div className="flex flex-wrap flex-col justify-center items-center mt-20 gap-y-8 md:grid md:grid-cols-2 md:grid-rows-3 md:gap-6">
           {menuData.map((item) => (
-            <div key={item.id}>
+            <div className="" key={item.id}>
               <MenuCards {...item} />
             </div>
           ))}
