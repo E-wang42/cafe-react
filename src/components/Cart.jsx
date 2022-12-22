@@ -21,7 +21,9 @@ function Cart() {
         })}
         {priceTotal > 0 ? (
           <div className="flex flex-col w-full h-24 mt-4 justify-center items-center text-center mx-auto gap-y-2">
-            <h2 className="text-black capitalize">subtotal: {priceTotal}</h2>
+            <h2 className="text-black capitalize font-roboto">
+              subtotal: ${priceTotal}
+            </h2>
             <button className="text-black yellowBtn uppercase tracking-wider">
               checkout
             </button>
