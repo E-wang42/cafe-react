@@ -12,16 +12,20 @@ const defaultCartData = () => {
 };
 
 export const CartProvider = (props) => {
-  const [drinks, setDrinks] = useState(defaultCartData, () => {
-    const localData = window.localStorage.getItem("my_cart_items");
-    return localData ? JSON.parse(localData) : [];
-  });
-
+  const [drinks, setDrinks] = useState(defaultCartData());
   const drinksArray = Object.values(drinks);
 
   useEffect(() => {
-    window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
-  }, [drinks]);
+    const localData = window.localStorage.getItem("my_cart_items");
+    const data = localData ? JSON.parse(localData) : [];
+    if (data) {
+      setDrinks(data);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
+  // }, [drinks]);
 
   const cartTotal = () => {
     let total = 0;
@@ -38,6 +42,7 @@ export const CartProvider = (props) => {
     setDrinks((prevState) => {
       return { ...prevState, [drinkId]: prevState[drinkId] + 1 };
     });
+    window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
   };
 
   const removeFromCart = (drinkId) => {

@@ -12,7 +12,7 @@ function Contact() {
     <section className="text-gray-400 bg-pastel-coffee body-font relative py-[5.4rem] md:py-[5.2rem]">
       <PagesBanner image="src/assets/contactBanner.png" title="Contact Us" />
       <div className="w-11/12 md:max-w-[68rem] px-5 md:px-0 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="flex-col lg:w-2/3 md:w-1/2 bg-light-coffee rounded-lg overflow-hidden sm:mr-10 p-10 sm:flex-col sm:justify-between flex md:flex-col items-end md:justify-between relative">
+        <div className="flex-col lg:w-2/3 md:w-1/2 bg-light-coffee rounded overflow-hidden sm:mr-10 p-10 sm:flex-col sm:justify-between flex md:flex-col items-end md:justify-between relative">
           {isLoaded ? (
             <Maps />
           ) : (
@@ -101,7 +101,7 @@ function Contact() {
             ></textarea>
           </div>
           <button className="yellowBtn text-xl">SUBMIT</button>
-          <p className="text-xs text-gray-400 text-opacity-90 mt-3">
+          <p className="text-xs text-black text-opacity-90 mt-3 ">
             Chicharrones blog helvetica normcore iceland tousled brook viral
             artisan.
           </p>
