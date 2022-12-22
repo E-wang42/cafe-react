@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { set } from "react-hook-form";
 import menuData from "../data/menuData.json";
 
 export const CartContext = createContext(null);
@@ -17,15 +18,11 @@ export const CartProvider = (props) => {
 
   useEffect(() => {
     const localData = window.localStorage.getItem("my_cart_items");
-    const data = localData ? JSON.parse(localData) : [];
-    if (data) {
-      setDrinks(data);
+    if (localData) {
+      setDrinks(JSON.parse(localData));
     }
+    return;
   }, []);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
-  // }, [drinks]);
 
   const cartTotal = () => {
     let total = 0;
@@ -40,20 +37,25 @@ export const CartProvider = (props) => {
 
   const addToCart = (drinkId) => {
     setDrinks((prevState) => {
-      return { ...prevState, [drinkId]: prevState[drinkId] + 1 };
+      let newDrinks = { ...prevState, [drinkId]: prevState[drinkId] + 1 };
+      window.localStorage.setItem("my_cart_items", JSON.stringify(newDrinks));
+      return newDrinks;
     });
-    window.localStorage.setItem("my_cart_items", JSON.stringify(drinks));
   };
 
   const removeFromCart = (drinkId) => {
     setDrinks((prevState) => {
-      return { ...prevState, [drinkId]: prevState[drinkId] - 1 };
+      let newDrinks = { ...prevState, [drinkId]: prevState[drinkId] - 1 };
+      window.localStorage.setItem("my_cart_items", JSON.stringify(newDrinks));
+      return newDrinks;
     });
   };
 
   const cartInputUpdate = (updatedAmount, drinkId) => {
     setDrinks((prevState) => {
-      return { ...prevState, [drinkId]: updatedAmount };
+      let newDrinks = { ...prevState, [drinkId]: updatedAmount };
+      window.localStorage.setItem("my_cart_items", JSON.stringify(newDrinks));
+      return newDrinks;
     });
   };
 
