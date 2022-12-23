@@ -4,7 +4,6 @@ import PagesBanner from "../components/PagesBanner";
 function About() {
   return (
     <>
-      {/* <figure className="absolute bg-light-coffee w-full h-96 top-[125.5%] -z-10"></figure> */}
       <section className="w-full py-[5.4rem] md:py-[5.2rem]">
         <PagesBanner
           title="Brewed With Integrity"
@@ -20,7 +19,7 @@ function About() {
             <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
           </figure>
           <div className="flex flex-col gap-y-2 pb-36 md:pb-0">
-            <h2 className="font-roboto text-3xl md:text-4xl">
+            <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Passion for Quality
             </h2>
             <p>
@@ -48,7 +47,7 @@ function About() {
             <span className="bg-sky-600 w-full md:w-[31rem] bg-opacity-80 h-[17rem] md:h-[20rem] -mt-56 md:-mt-[18.6rem] block -z-10 mx-auto md:mx-0 sm:w-4/5 rounded shadow-sm"></span>
           </figure>
           <div className="flex flex-col gap-y-2 pb-36 md:pb-0">
-            <h2 className="font-roboto text-3xl md:text-4xl">
+            <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Commitment to Craft
             </h2>
             <p>
@@ -70,7 +69,7 @@ function About() {
             ></span>
           </div>
           <div className="flex flex-col gap-y-2 pb-8 md:pb-0">
-            <h2 className="font-roboto text-3xl md:text-4xl">
+            <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Taste That Inspires
             </h2>
             <p>
@@ -91,8 +90,8 @@ function About() {
         </div>
 
         <div className="flex flex-col justify-center items-center w-11/12 mx-auto gap-y-6 pb-10 md:max-w-[68rem]">
-          <h2 className="capitalize font-roboto text-3xl text-center">
-            our promise from kettle to cup
+          <h2 className="capitalize font-roboto text-3xl text-center text-shadow text-light-coffee">
+            our promise to you
           </h2>
           <p className="text-center md:w-2/3">
             Gratefulness taxes cliche, misses mentionable walled wakening cop

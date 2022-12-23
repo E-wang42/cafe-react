@@ -5,7 +5,7 @@ function PagesBanner(props) {
     <>
       <div className="w-full bg-hero-pattern h-[26rem]">
         <div className="w-11/12 mx-auto md:flex md:flex-row md:max-w-[68rem] md:justify-center md:items-center md:translate-y-12">
-          <h2 className="text-6xl mb-2 md:text-8xl font-cormorant text-dark-coffee font-medium w-full pt-4 md:pt-0">
+          <h2 className="text-6xl mb-2 md:text-8xl font-cormorant text-light-coffee text-shadow font-medium w-full pt-4 md:pt-0">
             {props.title}
           </h2>
           <div className="flex flex-col flex-shrink flex-wrap justify-between items-start">

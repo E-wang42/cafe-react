@@ -27,7 +27,7 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -79,4 +79,13 @@ button {
 
 .carouselImage {
   @apply object-cover h-full w-full object-center;
+}
+
+@layer components {
+  .text-shadow {
+    text-shadow: 1px 1px 2px var(--darkCoffee);
+  }
+  .border-bottom {
+    border-bottom: 1px solid var(--darkCoffee);
+  }
 }
