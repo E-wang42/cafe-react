@@ -8,12 +8,34 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import HomeCards from "../components/HomeCards";
 import { Link } from "react-router-dom";
 
+const containerVariants = {
+  start: {
+    opacity: 0,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  middle: {
+    opacity: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  end: {
+    clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+  },
+};
+
 function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="section2" className="h-full py-[4.3rem] md:py-[5.2rem]">
+    <motion.section
+      variants={containerVariants}
+      initial="start"
+      animate="middle"
+      exit="end"
+      transition={{ duration: 0.75 }}
+      id="section2"
+      className="h-full py-[4.3rem] md:py-[5.2rem]"
+    >
       <div className="w-full flex flex-col md:flex-row justify-center">
         <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
           <div className="bg-light-coffee w-[22rem] h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded-lg p-10">
@@ -36,7 +58,7 @@ function Home() {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
+            navigation={false}
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper"
           >
@@ -167,7 +189,7 @@ function Home() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

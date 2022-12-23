@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  // function toTop() {
-  //   window.scrollTo({ top: 1000, behavior: "smooth" });
-  // }
-
   return (
     <footer className="text-gray-400 bg-dark-coffee body-font">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col md:justify-between">
@@ -18,28 +14,30 @@ function Footer() {
             />
           </Link>
           <div className="flex flex-col w-48 mx-auto mb-4">
-            <span className="ml-3 text-xl">Panda Coffee House</span>
-            <p className="mt-2 text-sm text-gray-500 mb-4">
+            <span className="text-xl font-cormorant font-bold">
+              Panda Coffee House
+            </span>
+            <p className="mt-2 text-xs text-gray-500 mb-4">
               Air plant banjo lyft occupy retro adaptogen indego
             </p>
             <div className="flex flew-row mx-auto gap-x-4 justify-center items-center">
               <img
-                className="w-6 h-6 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
+                className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
                 src="src/assets/socials/twitter.svg"
                 alt="twitter"
               />
               <img
-                className="w-6 h-6 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
+                className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
                 src="src/assets/socials/facebook.svg"
                 alt="twitter"
               />
               <img
-                className="w-6 h-6 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
+                className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
                 src="src/assets/socials/instagram.svg"
                 alt="twitter"
               />
               <img
-                className="w-6 h-6 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
+                className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
                 src="src/assets/socials/youtube.svg"
                 alt="twitter"
               />
@@ -141,7 +139,6 @@ function Footer() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start cursor-pointer"
           >
-            {/* <img src="" alt="" />*/}
             <svg
               width="30"
               height="30"
@@ -158,8 +155,8 @@ function Footer() {
                 fill="currentColor"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z"
                 fill="currentColor"
               />

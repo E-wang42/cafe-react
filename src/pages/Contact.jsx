@@ -1,6 +1,7 @@
 import React from "react";
 import PagesBanner from "../components/PagesBanner";
 import { useLoadScript } from "@react-google-maps/api";
+import { motion, useInView } from "framer-motion";
 import Maps from "../components/Maps";
 import PageIntroText from "../components/PageIntroText";
 
@@ -9,8 +10,29 @@ function Contact() {
     googleMapsApiKey: "AIzaSyAkrABZq1i-KcrN7kXj60QfeaVXcduLo3Y",
   });
 
+  const containerVariants = {
+    start: {
+      opacity: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    },
+    middle: {
+      opacity: 1,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    },
+    end: {
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+    },
+  };
+
   return (
-    <section className="text-gray-400 bg-pastel-coffee body-font relative py-[5.4rem] md:py-[5.2rem]">
+    <motion.section
+      variants={containerVariants}
+      initial="start"
+      animate="middle"
+      exit="end"
+      transition={{ duration: 0.75 }}
+      className="text-gray-400 bg-pastel-coffee body-font relative py-[5.4rem] md:py-[5.2rem]"
+    >
       <PagesBanner image="src/assets/contactBanner.png" title="Get in Touch" />
       <PageIntroText
         heading="questions or concerns?"
@@ -112,7 +134,7 @@ function Contact() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

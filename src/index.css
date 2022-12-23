@@ -63,6 +63,7 @@ button {
   object-fit: cover;
   object-position: center;
   text-align: center;
+  cursor: grab;
 }
 
 .navLinkStyle {

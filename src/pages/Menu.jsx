@@ -2,11 +2,33 @@ import React from "react";
 import PagesBanner from "../components/PagesBanner";
 import menuData from "../data/menuData.json";
 import { MenuCards } from "../components/MenuCards";
+import { motion, useInView } from "framer-motion";
 import PageIntroText from "../components/PageIntroText";
+
+const containerVariants = {
+  start: {
+    opacity: 0,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  middle: {
+    opacity: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  end: {
+    clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+  },
+};
 
 function Menu() {
   return (
-    <section className="w-full py-[5.4rem] md:py-[5.2rem]">
+    <motion.section
+      variants={containerVariants}
+      initial="start"
+      animate="middle"
+      exit="end"
+      transition={{ duration: 0.75 }}
+      className="w-full py-[5.4rem] md:py-[5.2rem]"
+    >
       <PagesBanner
         image="src/assets/menuBanner.png"
         title="Always Satisfying"
@@ -24,7 +46,7 @@ function Menu() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

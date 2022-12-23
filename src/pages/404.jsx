@@ -1,9 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  start: {
+    opacity: 0,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  middle: {
+    opacity: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  end: {
+    clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+  },
+};
 
 function NotFound() {
   return (
-    <section className="h-screen w-full flex flex-col justify-center items-center bg-coffee-pastel">
+    <motion.section
+      variants={containerVariants}
+      initial="start"
+      animate="middle"
+      exit="end"
+      transition={{ duration: 0.75 }}
+      className="h-screen w-full flex flex-col justify-center items-center bg-coffee-pastel"
+    >
       <h1 className="text-9xl font-extrabold text-white tracking-widest">
         404
       </h1>
@@ -20,7 +42,7 @@ function NotFound() {
           </Link>
         </a>
       </button>
-    </section>
+    </motion.section>
   );
 }
 
