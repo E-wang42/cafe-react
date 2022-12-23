@@ -136,12 +136,14 @@ function Home() {
         </div>
       </div>
 
-      <div className="md:p-8 rounded-lg max-w-[68rem] mx-auto flex md:flex-row justify-center items-center text-center bg-light-coffee">
-        <img
-          className="hidden md:block -mt-72"
-          src="src\assets\pic.png"
-          alt="mobile"
-        />
+      <div className="md:pb-8 md:mt-64 rounded-lg max-w-[68rem] mx-auto flex md:flex-row justify-center items-center text-center bg-light-coffee">
+        <div className="hidden md:block md:w-full ">
+          <img
+            className="hidden w-64 md:block -mt-64 mx-auto -rotate-6"
+            src="src\assets\mockup.png"
+            alt="mobile"
+          />
+        </div>
         <div className="p-8 flex flex-col justify-center items-center gap-y-8">
           <h2 className="text-4xl font-roboto text-white capitalize md:text-start leading-tight">
             Download the App and earn points towards your next order

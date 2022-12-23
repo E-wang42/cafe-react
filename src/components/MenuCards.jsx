@@ -7,9 +7,9 @@ export const MenuCards = (props) => {
 
   return (
     <div className="w-full flex flex-col sm:flex-row">
-      <div className="bg-stone-500 w-full grid place-items-center p-2">
+      <div className="bg-hero-pattern w-full grid place-items-center p-2">
         <img
-          className="w-28 object-cover object-center drop-shadow-2xl"
+          className="w-28 rounded-full object-cover object-center drop-shadow-2xl backdrop-blur-sm mix-blend-multiply bg-blend-multiply"
           src={props.imgUrl}
           alt="drink"
         />
