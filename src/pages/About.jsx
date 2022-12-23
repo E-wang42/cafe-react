@@ -1,4 +1,5 @@
 import React from "react";
+import PageIntroText from "../components/PageIntroText";
 import PagesBanner from "../components/PagesBanner";
 
 function About() {
@@ -9,7 +10,11 @@ function About() {
           title="Brewed With Integrity"
           image="src/assets/about.png"
         />
-        <div className="w-11/12 py-40 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
+        <PageIntroText
+          heading="our process"
+          message="From Bean to Brew, for the Perfect Cup."
+        />
+        <div className="w-11/12 py-36 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
           <figure className="w-full md:hidden">
             <img
               className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
@@ -22,7 +27,7 @@ function About() {
             <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Passion for Quality
             </h2>
-            <p>
+            <p className="pt-4 leading-relaxed">
               Recompense theoretical memorize brands submarines, bootstrapped
               dulled balked spheres textually mouths unwanted specificity,
               overseeing reflection instantiations scorched count telling
@@ -50,7 +55,7 @@ function About() {
             <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Commitment to Craft
             </h2>
-            <p>
+            <p className="pt-4 leading-relaxed">
               Ceremonially scuttled ferried relativistically freezes splintered
               cards bugled, owe proved reputes earners sinning disguises
               stomaching memoryless motion, tachometers.
@@ -72,7 +77,7 @@ function About() {
             <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
               Taste That Inspires
             </h2>
-            <p>
+            <p className="pt-4 leading-relaxed">
               Bounded sunrise auctioneers, bacillus persuade maiden onboard
               freezes occurred series cleansing written loan, nibble spell rater
               retrospection impressionist gipsy jeeps settler convoys, sinews
@@ -93,7 +98,7 @@ function About() {
           <h2 className="capitalize font-roboto text-3xl text-center text-shadow text-light-coffee">
             our promise to you
           </h2>
-          <p className="text-center md:w-2/3">
+          <p className="text-center md:w-2/3 leading-relaxed">
             Gratefulness taxes cliche, misses mentionable walled wakening cop
             indemnity posing includes offices lag, arrows weasels mindfully
             comprehension slumber sixpence ranges caters, semiconductors rump
