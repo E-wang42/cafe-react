@@ -23,8 +23,8 @@ const containerVariants = {
 };
 
 function Home() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const viewRef = useRef(null);
+  const isInView = useInView(viewRef, { once: true, amount: 0.5 });
 
   return (
     <motion.section
@@ -49,7 +49,6 @@ function Home() {
         </div>
         <div className="md:w-8/12 w-full h-[26rem] md:h-[32rem]">
           <Swiper
-            id="swiperColor"
             slidesPerView={1}
             spaceBetween={0}
             centeredSlides={true}
@@ -96,17 +95,7 @@ function Home() {
           </a>
         </div>
       </div>
-      {/* <h1
-          style={{
-            transform: isInView ? "none" : "translateX(-200px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-          }}
-          className="text-6xl font-serif text-dark-coffee"
-          id="heading"
-        >
-          Panda Coffee House
-        </h1> */}
+
       <section className="w-11/12 md:max-w-[68rem] mx-auto grid md:place-items-center py-14">
         <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full flex flex-col justify-center items-center">
           <HomeCards
@@ -159,13 +148,17 @@ function Home() {
       </div>
 
       <div className="md:pb-8 md:mt-64 rounded-lg max-w-[68rem] mx-auto flex md:flex-row justify-center items-center text-center bg-light-coffee">
-        <div className="hidden md:block md:w-full ">
+        <div
+          ref={viewRef}
+          className={`hidden md:block md:w-full ${isInView ? "bounce" : null}`}
+        >
           <img
             className="hidden w-64 md:block -mt-64 mx-auto -rotate-6"
             src="src\assets\mockup.png"
             alt="mobile"
           />
         </div>
+
         <div className="p-8 flex flex-col justify-center items-center gap-y-8">
           <h2 className="text-4xl font-roboto text-white capitalize md:text-start leading-tight">
             Download the App and earn points towards your next order

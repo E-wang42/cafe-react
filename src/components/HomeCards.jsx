@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 function HomeCards(props) {
+  const viewRef = useRef(null);
+  const isInView = useInView(viewRef, { once: true, amount: "some" });
+
   return (
-    <div className="p-8 max-w-[32rem] bg-light-coffee flex-col flex gap-y-6 mb-16 md:mb-0">
+    <div
+      ref={viewRef}
+      style={{
+        transform: isInView ? "none" : "translateY(80px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s",
+      }}
+      className="p-8 max-w-[32rem] bg-light-coffee flex-col flex gap-y-6 mb-16 md:mb-0"
+    >
       <div>
         <img
           className="w-full h-80 object-cover object-center"
