@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 export const MenuCards = (props) => {
+  const viewRef = useRef(null);
+  const isInView = useInView(viewRef, { once: true, amount: "some" });
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="w-full flex flex-col sm:flex-row">
+    <div
+      ref={viewRef}
+      className={`${isInView && "shake"} w-full flex flex-col sm:flex-row`}
+    >
       <div className="bg-hero-pattern w-full grid place-items-center p-2">
         <img
           className="w-28 rounded-full object-cover object-center drop-shadow-2xl backdrop-blur-sm mix-blend-multiply bg-blend-multiply"

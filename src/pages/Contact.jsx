@@ -1,7 +1,7 @@
 import React from "react";
 import PagesBanner from "../components/PagesBanner";
 import { useLoadScript } from "@react-google-maps/api";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Maps from "../components/Maps";
 import PageIntroText from "../components/PageIntroText";
 

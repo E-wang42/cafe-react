@@ -96,7 +96,27 @@ button {
 }
 
 .bounce {
-  animation: bounce 0.9s 0.4s both;
+  animation: bounce 0.9s 0.3s both;
+}
+
+.rotate-in {
+  animation: rotate-in 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+.textAnimate {
+  animation: textAnimate 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s both;
+}
+
+.slideLeft {
+  animation: slideLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.slideRight {
+  animation: slideRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.shake {
+  animation: shake 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.4s both;
 }
 
 @keyframes bounce {
@@ -135,5 +155,80 @@ button {
     transform: translateY(0px);
     animation-timing-function: ease-out;
     opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: translateZ(-200px) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
   }
 }

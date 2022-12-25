@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import HomeCards from "../components/HomeCards";
 import { Link } from "react-router-dom";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css";
 
 const containerVariants = {
   start: {
@@ -39,7 +39,7 @@ function Home() {
       <div className="w-full flex flex-col md:flex-row justify-center">
         <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
           <div className="bg-light-coffee w-[22rem] h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded-lg p-10">
-            <h2 className="text-center capitalize font-roboto text-white text-2xl">
+            <h2 className="text-center capitalize font-roboto text-white text-3xl leading-relaxed">
               more than just coffee, it's your cup of inspiration.
             </h2>
             <Link to="/menu" className="yellowBtn">

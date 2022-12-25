@@ -2,7 +2,7 @@ import React from "react";
 import PagesBanner from "../components/PagesBanner";
 import menuData from "../data/menuData.json";
 import { MenuCards } from "../components/MenuCards";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import PageIntroText from "../components/PageIntroText";
 
 const containerVariants = {

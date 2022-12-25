@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import PageIntroText from "../components/PageIntroText";
 import PagesBanner from "../components/PagesBanner";
 import { motion, useInView } from "framer-motion";
@@ -18,6 +18,19 @@ const containerVariants = {
 };
 
 function About() {
+  const viewRef = useRef(null);
+  const viewRef1 = useRef(null);
+  const viewRef2 = useRef(null);
+  const viewRef3 = useRef(null);
+  const viewRef4 = useRef(null);
+  const viewRef5 = useRef(null);
+  const isInView = useInView(viewRef, { once: true, amount: "0.6" });
+  const isInView1 = useInView(viewRef1, { once: true, amount: "0.6" });
+  const isInView2 = useInView(viewRef2, { once: true, amount: "0.6" });
+  const isInView3 = useInView(viewRef3, { once: true, amount: "0.6" });
+  const isInView4 = useInView(viewRef4, { once: true, amount: "0.6" });
+  const isInView5 = useInView(viewRef5, { once: true, amount: "0.6" });
+
   return (
     <motion.section
       variants={containerVariants}
@@ -42,7 +55,12 @@ function About() {
           <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
         </figure>
         <div className="flex flex-col gap-y-2 pb-36 md:pb-0">
-          <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
+          <h2
+            ref={viewRef}
+            className={`w-full font-roboto text-3xl md:text-4xl text-light-coffee text-shadow ${
+              isInView && "textAnimate"
+            }`}
+          >
             Passion for Quality
           </h2>
           <p className="pt-4 leading-relaxed">
@@ -52,7 +70,10 @@ function About() {
             locators.
           </p>
         </div>
-        <div className="hidden md:block">
+        <div
+          ref={viewRef3}
+          className={`hidden md:block ${isInView3 && "rotate-in"}`}
+        >
           <img
             className="max-w-[24rem] h-[30rem] object-cover object-center translate-x-40 shadow-2xl drop-shadow-lg"
             src="src\assets\barista.jpg"
@@ -61,16 +82,24 @@ function About() {
           <span className="bg-orange-600 bg-opacity-80 w-full h-[20rem] -mt-72 block -z-10 mx-auto rounded shadow-sm"></span>
         </div>
 
-        <figure className="w-full md:block">
+        <div
+          ref={viewRef4}
+          className={`w-full md:block ${isInView4 && "rotate-in"}`}
+        >
           <img
             className="w-[max(20rem,10rem)] md:-translate-x-[4.5rem] drop-shadow-lg max-h-[25rem] md:max-w-[25rem] md:max-h-[28rem] shadow-2xl mx-auto z-10 -translate-x-14 object-cover object-center"
             src="src/assets/barista3.jpg"
             alt="barista"
           />
           <span className="bg-sky-600 w-full md:w-[31rem] bg-opacity-80 h-[17rem] md:h-[20rem] -mt-56 md:-mt-[18.6rem] block -z-10 mx-auto md:mx-0 sm:w-4/5 rounded shadow-sm"></span>
-        </figure>
+        </div>
         <div className="flex flex-col gap-y-2 pb-36 md:pb-0">
-          <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
+          <h2
+            ref={viewRef1}
+            className={`font-roboto text-3xl md:text-4xl text-light-coffee text-shadow ${
+              isInView1 && "textAnimate"
+            }`}
+          >
             Commitment to Craft
           </h2>
           <p className="pt-4 leading-relaxed">
@@ -92,7 +121,12 @@ function About() {
           ></span>
         </div>
         <div className="flex flex-col gap-y-2 pb-8 md:pb-0">
-          <h2 className="font-roboto text-3xl md:text-4xl text-light-coffee text-shadow">
+          <h2
+            ref={viewRef2}
+            className={`font-roboto text-3xl md:text-4xl text-light-coffee text-shadow ${
+              isInView2 && "textAnimate"
+            }`}
+          >
             Taste That Inspires
           </h2>
           <p className="pt-4 leading-relaxed">
@@ -102,7 +136,10 @@ function About() {
             place.
           </p>
         </div>
-        <div className="hidden md:block">
+        <div
+          ref={viewRef5}
+          className={`hidden md:block ${isInView5 && "rotate-in"}`}
+        >
           <img
             className="max-w-[24rem] h-[30rem] object-cover object-center translate-x-32 shadow-2xl drop-shadow-2xl"
             src="src\assets\barista2.jpg"
