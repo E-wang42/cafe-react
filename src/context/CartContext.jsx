@@ -3,6 +3,7 @@ import menuData from "../data/menuData.json";
 
 export const CartContext = createContext(null);
 
+//loops through json data for use as global state;
 const defaultCartData = () => {
   let cart = {};
   for (let i = 1; i < menuData.length + 1; i++) {
@@ -15,6 +16,7 @@ export const CartProvider = (props) => {
   const [drinks, setDrinks] = useState(defaultCartData());
   const drinksArray = Object.values(drinks);
 
+  //persists data from localStorage upon load;
   useEffect(() => {
     const localData = window.localStorage.getItem("my_cart_items");
     if (localData) {
@@ -23,6 +25,7 @@ export const CartProvider = (props) => {
     return;
   }, []);
 
+  //loops state, creates price total if not null;
   const cartTotal = () => {
     let total = 0;
     for (const item in drinks) {
@@ -34,6 +37,7 @@ export const CartProvider = (props) => {
     return total.toFixed(2);
   };
 
+  //adds to previous state and sets data to localStorage;
   const addToCart = (drinkId) => {
     setDrinks((prevState) => {
       let newDrinks = { ...prevState, [drinkId]: prevState[drinkId] + 1 };
@@ -42,6 +46,7 @@ export const CartProvider = (props) => {
     });
   };
 
+  //minus from previous state and sets data to localStorage;
   const removeFromCart = (drinkId) => {
     setDrinks((prevState) => {
       let newDrinks = { ...prevState, [drinkId]: prevState[drinkId] - 1 };
@@ -50,6 +55,7 @@ export const CartProvider = (props) => {
     });
   };
 
+  //value from input field is set as previous state, sets data to localStorage;
   const cartInputUpdate = (updatedAmount, drinkId) => {
     setDrinks((prevState) => {
       let newDrinks = { ...prevState, [drinkId]: updatedAmount };
@@ -58,6 +64,7 @@ export const CartProvider = (props) => {
     });
   };
 
+  //reduce method for cart total;
   const cartQuantity = drinksArray.reduce(
     (quantity, item) => quantity + item,
     0

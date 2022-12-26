@@ -39,8 +39,8 @@ function Home() {
       className="h-full py-[4.3rem] md:py-[5.2rem]"
     >
       <div className="w-full flex flex-col md:flex-row justify-center">
-        <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
-          <div className="bg-light-coffee w-[22rem] customStyle h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded p-10">
+        <div className="hidden w-full md:h-[44rem] bg-hero-pattern md:block">
+          <div className="bg-light-coffee w-[22rem] customStyle h-96 absolute top-72 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded p-10">
             <h2 className="text-center capitalize font-roboto text-white text-3xl leading-relaxed">
               more than just coffee, it's your cup of inspiration.
             </h2>
@@ -49,7 +49,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className="md:w-8/12 w-full h-[26rem] md:h-[32rem]">
+        <div className="md:w-8/12 w-full h-[30rem] md:h-[44rem]">
           <Swiper
             slidesPerView={1}
             spaceBetween={0}
