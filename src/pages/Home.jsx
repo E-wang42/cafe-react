@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import HomeCards from "../components/HomeCards";
+import PageIntroText from "../components/PageIntroText";
+import { ThreeColumn } from "../components/ThreeColumn";
 import { Link } from "react-router-dom";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -38,7 +40,7 @@ function Home() {
     >
       <div className="w-full flex flex-col md:flex-row justify-center">
         <div className="hidden w-full md:h-[32rem] bg-hero-pattern md:block">
-          <div className="bg-light-coffee w-[22rem] h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded-lg p-10">
+          <div className="bg-light-coffee w-[22rem] customStyle h-96 absolute top-36 left-72 z-10 flex flex-col justify-center items-center gap-y-14 rounded p-10">
             <h2 className="text-center capitalize font-roboto text-white text-3xl leading-relaxed">
               more than just coffee, it's your cup of inspiration.
             </h2>
@@ -86,7 +88,7 @@ function Home() {
         </div>
       </div>
       <div className="w-full h-80 bg-hero-pattern md:hidden py-8">
-        <div className="bg-light-coffee p-6 ml-8 w-60 h-64 z-10 flex flex-col justify-center items-center gap-y-12 rounded-lg">
+        <div className="bg-light-coffee customStyle p-6 ml-8 w-60 h-64 z-10 flex flex-col justify-center items-center gap-y-12 rounded-lg">
           <h2 className="text-center capitalize font-roboto text-white text-xl">
             more than just coffee, it's your cup of inspiration.
           </h2>
@@ -95,18 +97,41 @@ function Home() {
           </a>
         </div>
       </div>
-
+      <PageIntroText
+        heading="hello and welcome"
+        message="Sip into Something Cozy..."
+      />
+      <div className="max-w-[68rem] mx-auto flex flex-wrap flex-col md:flex-row md:gap-x-8 justify-center items-center md:mb-8">
+        <ThreeColumn
+          to="/about"
+          img="src/assets/pic1.jpg"
+          caption="who we are"
+          para="history"
+        />
+        <ThreeColumn
+          to="/menu"
+          img="src/assets/pic2.jpg"
+          caption="our coffee"
+          para="online menu"
+        />
+        <ThreeColumn
+          to="/contact"
+          img="src/assets/pic3.jpg"
+          caption="visit us!"
+          para="location"
+        />
+      </div>
       <section className="w-11/12 md:max-w-[68rem] mx-auto grid md:place-items-center py-14">
         <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full flex flex-col justify-center items-center">
           <HomeCards
             img="src\assets\coffeepour.jpg"
-            title="TITLE HERE"
+            title="dive into rich taste"
             desc="Epoch operations bogus, streamlining morrow shelf maples courtiers meditates divers entrance fleas, actinium rapids repairer keen sleepers unrestrictedly perceptually punish, floater hounds coastal."
-            button="CLICK THIS BUTTON →"
+            button="Try Our Drinks →"
           />
           <HomeCards
             img="src\assets\findtrue.png"
-            title="discover taste true to you"
+            title="discover flavor true to you"
             desc="Blazers artifact nationally wastefulness than resisting alcove whisked actuator, societies merger heathen appertains unties reaper antiquity resenting waltz, pressure marshals acne jig optionally. "
             button="Discover More →"
           />
@@ -114,7 +139,7 @@ function Home() {
             img="src\assets\teas.jpg"
             title="shop tea"
             desc="Unending driver relationship twilight, masturbates growling fate stragglers atypically lightness compartmentalized, indices powdered crochet havoc smokers shortcut airstrips figurative, concentrators."
-            button="All Tea →"
+            button="All Teas →"
           />
           <HomeCards
             img="src\assets\beans.jpg"

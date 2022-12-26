@@ -45,7 +45,7 @@ function About() {
         heading="our process"
         message="From Bean to Brew, for the Perfect Cup."
       />
-      <div className="w-11/12 py-36 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
+      <div className="w-11/12 pb-60 pt-28 flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-y-10 md:gap-y-60 gap-x-10  md:max-w-[68rem] mx-auto">
         <figure className="w-full md:hidden">
           <img
             className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
