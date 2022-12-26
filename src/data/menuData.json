@@ -3,42 +3,42 @@
     "id": 1,
     "name": "Iced Mocha Panda",
     "price": 3.99,
-    "imgUrl": "src/assets/drinks/drink1.png",
+    "imgUrl": "https://i.ibb.co/DKfd1Hb/drink1.png",
     "desc": "Bibbing signatures grating anhydrously addictions villainy, morphisms is escort encamps righting horrifies argue generates absinthe, parentheses"
   },
   {
     "id": 2,
     "name": "Fluffy Americano Panda",
     "price": 2.99,
-    "imgUrl": "src/assets/drinks/drink2.png",
+    "imgUrl": "https://i.ibb.co/985Bhb1/drink2.png",
     "desc": "Representation crossings bedazzled, rebukes pencils lived milky snugly laminar occur shorting purporter wave, conclusively diary excellent"
   },
   {
     "id": 3,
     "name": "Caramel Panda Swirl",
     "price": 4.99,
-    "imgUrl": "src/assets/drinks/drink3.png",
+    "imgUrl": "https://i.ibb.co/nz0WXXq/drink3.png",
     "desc": "Cried handful tanks buggy sharable grunted excesses devotees scripture wised, skylarking butyl motors undertakes annulled liquifying framed psychological"
   },
   {
     "id": 4,
     "name": "Cinnamon Dolce Panda",
     "price": 3.99,
-    "imgUrl": "src/assets/drinks/drink6.png",
+    "imgUrl": "https://i.ibb.co/djN31GH/drink6.png",
     "desc": "Mess ascription stanch defaulting afterthoughts same anguish, forsaking sucker boulder recapitulated fluidly officiously convertible mentioned"
   },
   {
     "id": 5,
     "name": "White Chocolate Panda",
     "price": 5.99,
-    "imgUrl": "src/assets/drinks/drink5.png",
+    "imgUrl": "https://i.ibb.co/ZHm3xPv/drink5.png",
     "desc": "Refute by leveled, giddiness kills implementors transferrers amputated abolish falsehoods obtain, assertion confronters sympathies"
   },
   {
     "id": 6,
     "name": "Java Chip Panda",
     "price": 3.99,
-    "imgUrl": "src/assets/drinks/drink4.png",
+    "imgUrl": "https://i.ibb.co/6N8Nsvh/drink4.png",
     "desc": "Deliverable proposals hypocrite squabbling horizontal, unattended squinting shave limits halted loathe purposes warningly."
   }
 ]
