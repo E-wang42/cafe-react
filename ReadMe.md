@@ -1,2 +1,2 @@
-![Landing](public\landing.png?raw=true "Landing Page")
-![Code](public\code.png?raw=true "Code")
+<img src="public/landing.png" alt="Landing" title="landing page">
+<img src="public/code.png" alt="Code" title="code sample">
