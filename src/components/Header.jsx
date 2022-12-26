@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.jpg";
 import Cart from "./Cart";
 
 function Header() {
@@ -54,7 +55,7 @@ function Header() {
         <div className="flex title-font font-bold items-center text-white">
           <img
             className="w-11 h-11 p-1 object-center bg-[#A5662A] rounded-full"
-            src="src/assets/logo.jpg"
+            src={logo}
             alt="logo"
           />
           <span className="ml-3 text-xl md:text-3xl font-cormorant">

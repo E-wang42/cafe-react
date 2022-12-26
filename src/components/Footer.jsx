@@ -1,5 +1,10 @@
 import React from "react";
+import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
+import fb from "../assets/socials/facebook.svg";
+import ig from "../assets/socials/instagram.svg";
+import tw from "../assets/socials/twitter.svg";
+import yt from "../assets/socials/youtube.svg";
 
 function Footer() {
   return (
@@ -9,7 +14,7 @@ function Footer() {
           <Link className="mx-auto md:mx-0 mb-4 md:mb-0" to="/">
             <img
               className="rounded-full w-10 h-10 bg-light-coffee p-1 object-cover object-center text-center"
-              src="src/assets/logo.jpg"
+              src={logo}
               alt="logo"
             />
           </Link>
@@ -23,23 +28,23 @@ function Footer() {
             <div className="flex flew-row mx-auto gap-x-4 justify-center items-center">
               <img
                 className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
-                src="src/assets/socials/twitter.svg"
+                src={tw}
                 alt="twitter"
               />
               <img
                 className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
-                src="src/assets/socials/facebook.svg"
-                alt="twitter"
+                src={fb}
+                alt="facebook"
               />
               <img
                 className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
-                src="src/assets/socials/instagram.svg"
-                alt="twitter"
+                src={ig}
+                alt="instagram"
               />
               <img
                 className="w-5 h-5 white-filter hover:-translate-y-1 hover:transition-all cursor-pointer"
-                src="src/assets/socials/youtube.svg"
-                alt="twitter"
+                src={yt}
+                alt="youtube"
               />
             </div>
           </div>

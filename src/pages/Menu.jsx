@@ -4,6 +4,7 @@ import menuData from "../data/menuData.json";
 import { MenuCards } from "../components/MenuCards";
 import { motion } from "framer-motion";
 import PageIntroText from "../components/PageIntroText";
+import menuBanner from "../assets/menuBanner.png";
 
 const containerVariants = {
   start: {
@@ -29,10 +30,7 @@ function Menu() {
       transition={{ duration: 0.75 }}
       className="w-full py-[5.4rem] md:py-[5.2rem]"
     >
-      <PagesBanner
-        image="src/assets/menuBanner.png"
-        title="Always Satisfying"
-      />
+      <PagesBanner image={menuBanner} title="Always Satisfying" />
       <PageIntroText
         heading="made to order"
         message="Order Online or On The App"

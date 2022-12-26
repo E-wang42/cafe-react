@@ -6,8 +6,20 @@ import HomeCards from "../components/HomeCards";
 import PageIntroText from "../components/PageIntroText";
 import { ThreeColumn } from "../components/ThreeColumn";
 import { Link } from "react-router-dom";
+import heroImg1 from "../assets/hero1.jpg";
+import heroImg2 from "../assets/hero2.jpg";
+import heroImg3 from "../assets/hero3.jpg";
+import pic1 from "../assets/pic1.jpg";
+import pic2 from "../assets/pic2.jpg";
+import pic3 from "../assets/pic3.jpg";
+import card1 from "../assets/coffeepour.jpg";
+import card2 from "../assets/findtrue.png";
+import card3 from "../assets/teas.jpg";
+import card4 from "../assets/beans.jpg";
+import phone from "../assets/mockup.png";
+import appStore from "../assets/appstore.png";
+import playStore from "../assets/playstore.png";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css";
 
 const containerVariants = {
@@ -64,25 +76,13 @@ function Home() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img
-                className="carouselImage"
-                src="src/assets/hero1.jpg"
-                alt="hero1"
-              />
+              <img className="carouselImage" src={heroImg1} alt="hero1" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="carouselImage"
-                src="src/assets/hero2.jpg"
-                alt="hero2"
-              />
+              <img className="carouselImage" src={heroImg2} alt="hero2" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="carouselImage"
-                src="src/assets/hero3.jpg"
-                alt="hero3"
-              />
+              <img className="carouselImage" src={heroImg3} alt="hero3" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -104,19 +104,19 @@ function Home() {
       <div className="max-w-[68rem] mx-auto flex flex-wrap flex-col md:flex-row md:gap-x-8 justify-center items-center md:mb-8">
         <ThreeColumn
           to="/about"
-          img="src/assets/pic1.jpg"
+          img={pic1}
           caption="who we are"
           para="history"
         />
         <ThreeColumn
           to="/menu"
-          img="src/assets/pic2.jpg"
+          img={pic2}
           caption="our coffee"
           para="online menu"
         />
         <ThreeColumn
           to="/contact"
-          img="src/assets/pic3.jpg"
+          img={pic3}
           caption="visit us!"
           para="location"
         />
@@ -124,25 +124,25 @@ function Home() {
       <section className="w-11/12 md:max-w-[68rem] mx-auto grid md:place-items-center py-14">
         <div className="md:inline-grid md:grid-cols-2 md:gap-16 grid-rows-2 w-full flex flex-col justify-center items-center">
           <HomeCards
-            img="src\assets\coffeepour.jpg"
+            img={card1}
             title="dive into rich taste"
             desc="Epoch operations bogus, streamlining morrow shelf maples courtiers meditates divers entrance fleas, actinium rapids repairer keen sleepers unrestrictedly perceptually punish, floater hounds coastal."
             button="Try Our Drinks →"
           />
           <HomeCards
-            img="src\assets\findtrue.png"
+            img={card2}
             title="discover flavor true to you"
             desc="Blazers artifact nationally wastefulness than resisting alcove whisked actuator, societies merger heathen appertains unties reaper antiquity resenting waltz, pressure marshals acne jig optionally. "
             button="Discover More →"
           />
           <HomeCards
-            img="src\assets\teas.jpg"
+            img={card3}
             title="shop tea"
             desc="Unending driver relationship twilight, masturbates growling fate stragglers atypically lightness compartmentalized, indices powdered crochet havoc smokers shortcut airstrips figurative, concentrators."
             button="All Teas →"
           />
           <HomeCards
-            img="src\assets\beans.jpg"
+            img={card4}
             title="shop coffee"
             desc="Terminating impetuously epidemics amplify recesses atypically lightness compartmentalized banish, mistakion combinations armstrong inserted sneeze achievements signers."
             button="All Coffee →"
@@ -179,7 +179,7 @@ function Home() {
         >
           <img
             className="hidden w-64 md:block -mt-64 mx-auto -rotate-6"
-            src="src\assets\mockup.png"
+            src={phone}
             alt="mobile"
           />
         </div>
@@ -191,12 +191,12 @@ function Home() {
           <div className="flex flex-row">
             <img
               className="max-w-[14rem] h-[3.8rem] cursor-pointer mt-3"
-              src="src\assets\appstore.png"
+              src={appStore}
               alt="appstore"
             />
             <img
               className="max-w-[13.5rem] h-[5.5rem] cursor-pointer"
-              src="src\assets\playstore.png"
+              src={playStore}
               alt="playstore"
             />
           </div>

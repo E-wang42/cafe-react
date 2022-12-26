@@ -2,6 +2,11 @@ import React, { useRef } from "react";
 import PageIntroText from "../components/PageIntroText";
 import PagesBanner from "../components/PagesBanner";
 import { motion, useInView } from "framer-motion";
+import aboutBanner from "../assets/aboutBanner.png";
+import barista1 from "../assets/barista.jpg";
+import barista2 from "../assets/barista2.jpg";
+import barista3 from "../assets/barista3.jpg";
+import video from "../assets/video.mp4";
 
 const containerVariants = {
   start: {
@@ -40,7 +45,7 @@ function About() {
       transition={{ duration: 0.75 }}
       className="w-full py-[5.4rem] md:py-[5.2rem]"
     >
-      <PagesBanner title="Brewed With Integrity" image="src/assets/about.png" />
+      <PagesBanner title="Brewed With Integrity" image={aboutBanner} />
       <PageIntroText
         heading="our process"
         message="From Bean to Brew, for the Perfect Cup."
@@ -49,11 +54,12 @@ function About() {
         <figure className="w-full md:hidden">
           <img
             className="w-[max(20rem,10rem)] drop-shadow-lg max-h-[25rem] shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
-            src="src/assets/barista.jpg"
+            src={barista1}
             alt="barista"
           />
           <span className="bg-orange-600 bg-opacity-80 w-full h-[17rem] -mt-56 block -z-10 mx-auto sm:w-4/5 rounded-lg shadow-sm"></span>
         </figure>
+
         <div className="flex flex-col gap-y-2 pb-36 md:pb-0">
           <h2
             ref={viewRef}
@@ -76,7 +82,7 @@ function About() {
         >
           <img
             className="max-w-[24rem] h-[30rem] object-cover object-center translate-x-40 shadow-2xl drop-shadow-lg"
-            src="src\assets\barista.jpg"
+            src={barista1}
             alt="barista"
           />
           <span className="bg-orange-600 bg-opacity-80 w-full h-[20rem] -mt-72 block -z-10 mx-auto rounded shadow-sm"></span>
@@ -88,7 +94,7 @@ function About() {
         >
           <img
             className="w-[max(20rem,10rem)] md:-translate-x-[4.5rem] drop-shadow-lg max-h-[25rem] md:max-w-[25rem] md:max-h-[28rem] shadow-2xl mx-auto z-10 -translate-x-14 object-cover object-center"
-            src="src/assets/barista3.jpg"
+            src={barista3}
             alt="barista"
           />
           <span className="bg-sky-600 w-full md:w-[31rem] bg-opacity-80 h-[17rem] md:h-[20rem] -mt-56 md:-mt-[18.6rem] block -z-10 mx-auto md:mx-0 sm:w-4/5 rounded shadow-sm"></span>
@@ -112,7 +118,7 @@ function About() {
         <div className="w-full md:hidden">
           <img
             className="w-[max(20rem,10rem)] max-h-[25rem] drop-shadow-lg shadow-2xl mx-auto z-10 translate-x-14 object-cover object-center"
-            src="src/assets/barista2.jpg"
+            src={barista2}
             alt="barista"
           />
           <span
@@ -142,7 +148,7 @@ function About() {
         >
           <img
             className="max-w-[24rem] h-[30rem] object-cover object-center translate-x-32 shadow-2xl drop-shadow-2xl"
-            src="src\assets\barista2.jpg"
+            src={barista2}
             alt="barista"
           />
           <span className="bg-amber-500 bg-opacity-70 w-full h-[20rem] -mt-72 block -z-10 mx-auto rounded shadow-sm"></span>
@@ -168,7 +174,7 @@ function About() {
           muted
           loop
         >
-          <source src="src/assets/video.mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
       </div>
     </motion.section>

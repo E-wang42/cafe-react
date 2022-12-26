@@ -4,6 +4,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import { motion } from "framer-motion";
 import Maps from "../components/Maps";
 import PageIntroText from "../components/PageIntroText";
+import contactBanner from "../assets/contactBanner.png";
 
 function Contact() {
   const { isLoaded } = useLoadScript({
@@ -33,7 +34,7 @@ function Contact() {
       transition={{ duration: 0.75 }}
       className="text-gray-400 bg-pastel-coffee body-font relative py-[5.4rem] md:py-[5.2rem]"
     >
-      <PagesBanner image="src/assets/contactBanner.png" title="Get in Touch" />
+      <PagesBanner image={contactBanner} title="Get in Touch" />
       <PageIntroText
         heading="questions or concerns?"
         message="We'd Love to Hear From You!"
